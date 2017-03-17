@@ -16,3 +16,9 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+.idea/copyright/
+.idea/majowaGit.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+wordpress/
