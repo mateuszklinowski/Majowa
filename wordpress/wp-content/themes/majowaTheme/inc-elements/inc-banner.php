@@ -1,3 +1,4 @@
+<?php include (TEMPLATEPATH . '/classes/conn.php' ); ?>
 <div class="banner-container">
     <div class="banner-image">
 
@@ -5,7 +6,7 @@
             <img src="<?php echo get_template_directory_uri() ?>/img/majowa-white.png">
             <div class="todayClasses">
                 <?php
-                $db = new DB('majowa','127.0.0.1','root','2200953');
+                $db = new DB($name,$host,$user,$pass);
                 //                $db = new DB('bboosteurzmk','bboosteurzmk.mysql.db','bboosteurzmk','J8aK969E5w');
                 $classes = $db->getToDaysClasses();
                 $i = 0;

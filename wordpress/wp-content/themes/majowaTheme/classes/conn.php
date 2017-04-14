@@ -8,7 +8,7 @@
 
 
 $name='majowa';
-$host='127.0dddddd.0.1';
+$host='127.0.0.1';
 $user='root';
 $pass='2200953';
 
