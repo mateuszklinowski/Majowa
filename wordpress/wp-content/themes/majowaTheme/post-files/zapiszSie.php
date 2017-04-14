@@ -56,9 +56,11 @@ if(isset($_POST['entry.1782511083'])){
         <input type="text" placeholder="Nazwisko" name="entry.173465573">
         <input type="text" placeholder="Nr telefonu" name="entry.774965994">
         <input type="email" placeholder="Email" name="entry.1943066783">
-        <input type="radio" name="entry.1994805656" value="Solo">
-        <input type="radio" name="entry.1994805656" value="Z partnerem">
-        <select name="entry.491094824">
+        <input type="text" name="entry.1994805656">
+        <input type="text" name="entry.491094824">
+        <!--<input type="radio" name="entry.1994805656" value="Solo">
+        <input type="radio" name="entry.1994805656" value="Z partnerem">-->
+        <!--<select name="entry.491094824">
             <option value="taniec">Tango</option>
             <option value="taniec">Jazz</option>
             <option value="taniec">Salsa</option>
@@ -68,7 +70,7 @@ if(isset($_POST['entry.1782511083'])){
             <option value="taniec">Joga</option>
             <option value="taniec">Gimnastyka</option>
             <option value="taniec">Taniec użytkowy</option>
-        </select>
+        </select>-->
         <input type="submit">
     </form>
     <?php
