@@ -3,7 +3,9 @@
     <div class="banner-image">
 
         <div class="banner-cut-div">
-            <img src="<?php echo get_template_directory_uri() ?>/img/majowa-white.png">
+            <a href="<?php echo get_home_url()?>">
+                <img src="<?php echo get_template_directory_uri() ?>/img/logo-a4.png">
+            </a>
             <div class="todayClasses">
                 <?php
                 $db = new DB($name,$host,$user,$pass);

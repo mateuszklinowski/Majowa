@@ -221,7 +221,7 @@ body {
   top: -100px;
   bottom: -100px;
   width: 540px;
-  background: #aa2929;
+  background: url('../img/background.png') repeat;
   -webkit-transform: rotate(8deg);
   -moz-transform: rotate(8deg);
   -ms-transform: rotate(8deg);
@@ -254,7 +254,7 @@ body {
   -ms-transform: rotate(-8deg) translate(-50%, -50%);
   -o-transform: rotate(-8deg) translate(-50%, -50%);
   transform: rotate(-8deg) translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(5, 5, 5, 0.7);
   font-size: 22px;
 }
 .page-container .banner-container .banner-image .banner-cut-div .todayClasses .classBlock {
