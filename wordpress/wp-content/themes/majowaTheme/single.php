@@ -36,12 +36,12 @@ get_header();
                 <?php
                 $category = get_the_category();
 
-
-
                 if($category[0] -> name == 'Instruktor'){
                     get_template_part('post-files/instructor-classes');
                 }
-
+                else if ($category[0] -> name == 'Taniec'){
+                    get_template_part('post-files/zapiszSie');
+                }
                  ?>
 
 
