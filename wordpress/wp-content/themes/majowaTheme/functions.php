@@ -3,14 +3,15 @@
 
 function main_scripts_enqueue(){
 
+    wp_enqueue_style('https://fonts.googleapis.com/css?family=Abril+Fatface|Fjalla+One',array(),'1.0.0','all');
+    wp_enqueue_style('https://fonts.googleapis.com/css?family=Montserrat',array(),'1.0.0','all');
     wp_enqueue_style('bootstrapCSS', get_template_directory_uri().'/Bootstrap/css/bootstrap.min.css', array(),'1.0.0','all');
     wp_enqueue_style('mainCSS', get_template_directory_uri().'/css/main.css', array(),'1.0.0','all');
     wp_enqueue_script('jQuery',get_template_directory_uri().'/js/jquery-3.1.1.min.js',array(),'3.1.1',true);
     wp_enqueue_script('bootstrapJS',get_template_directory_uri().'/Bootstrap/js/bootstrap.min.js',array(),'1.0.0',true);
+    wp_enqueue_script('sweetAlerts','https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.js',array(),'1.0.0',true);
     wp_enqueue_script('mainJS',get_template_directory_uri().'/js/main.js',array(),'1.0.0',true);
     wp_enqueue_script('font-awesome',"https://use.fontawesome.com/59ea93251c.js",array(),'1.0.0',true);
-    wp_enqueue_style('https://fonts.googleapis.com/css?family=Abril+Fatface|Fjalla+One',array(),'1.0.0','all');
-    wp_enqueue_style('https://fonts.googleapis.com/css?family=Montserrat',array(),'1.0.0','all');
 }
 
 add_action('wp_enqueue_scripts','main_scripts_enqueue');

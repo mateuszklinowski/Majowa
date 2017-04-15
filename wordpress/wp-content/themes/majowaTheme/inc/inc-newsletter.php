@@ -38,7 +38,7 @@ if(isset($_POST['my_email_variable'])){
         <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
         <p>Chcesz być na bieżąco z tym, co się u nas dzieje? Zapisz się do newslettera,
             <br/>
-            a nie ominie Cię żadne tanczne wydarzenie!
+            a nie ominie Cię żadne taneczne wydarzenie!
         </p>
         <form method="POST" action="http://localhost#newsletter">
         <div class="input-group">

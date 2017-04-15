@@ -67,7 +67,7 @@ get_header();
                     <tr><td class="tleft">karnet 1 miesiąc (8 kolejnych zajęć)</td><td>8</td><td class="tbold">64 zł</td><td>8 zł</td></tr>
                     <tr><td class="tleft">karnet 2 miesiące (16 kolejnych zajęć)</td><td>16</td><td class="tbold">112 zł</td><td>7 zł</td></tr>
                     <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                    <tr><td rowspan="4"> pilate flow <br/> (2 razy / tydzień)</td><td>pojedyncze wejście</td><td>&nbsp;</td><td class="tbold">15 zł</td><td>&nbsp;</td></tr>
+                    <tr><td rowspan="4"> pilates flow </td><td>pojedyncze wejście</td><td>&nbsp;</td><td class="tbold">15 zł</td><td>&nbsp;</td></tr>
                     <tr><td class="tleft">karnet 1 miesiąc (4 kolejne zajęcia)</td><td>4</td><td class="tbold">48 zł</td><td>12</td></tr>
                     <tr><td class="tleft">karnet 2 miesiące (8 kolejnych zajęć)</td><td>8</td><td class="tbold">90 zł</td><td>11 zł</td></tr>
                     <tr><td class="tleft">karnet 3 miesiące (12 kolejnych zajęć)</td><td>12</td><td class="tbold">135 zł</td><td>11 zł</td></tr>

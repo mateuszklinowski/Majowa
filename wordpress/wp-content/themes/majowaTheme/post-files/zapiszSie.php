@@ -1,73 +1,28 @@
-<h3>Zapisz się</h3>
+<h3 id="toggleSingIn">Zapisz się <i class="fa fa-chevron-down fa-x2" aria-hidden="true"></i></h3>
 <!--Latest 4 posts-->
-<div>
-    <script>
-        !function(exports) {
-            exports.submitGoogleForm = submitGoogleForm;
-
-            function submitGoogleForm(form) {
-                try {
-                    var data = [].slice.call(form).map(function(control) {
-                        return 'value' in control && control.name ?
-                        control.name + '=' + (control.value === undefined ? '' : control.value) :
-                            '';
-                    }).join('&');
-                    var xhr = new XMLHttpRequest();
-
-                    xhr.open('POST', form.action + '/formResponse', true);
-                    xhr.setRequestHeader('Origin', 'https://docs.google.com');
-                    xhr.setRequestHeader('Accept',
-                        'application/xml, text/xml, */*; q=0.01');
-                    xhr.setRequestHeader('Content-type',
-                        'application/x-www-form-urlencoded; charset=UTF-8');
-                    xhr.send(data);
-                } catch(e) {}
-
-                form.parentNode.className += ' submitted';
-
-                return false;
-            }
-        }(typeof module === 'undefined' ? window : module.exports);
-    </script>
-
+<div class="aside-sing-in">
     <form method="POST"
           action="https://docs.google.com/forms/d/1HLmqkR4ULHnNvPxnjtUHdotzSLjp5UIIndsMk4FrqkE"
           onsubmit="return window.submitGoogleForm(this);">
-        <input type="text" placeholder="Imie" name="entry.1782511083">
-        <input type="text" placeholder="Nazwisko" name="entry.173465573">
-        <input type="text" placeholder="Nr telefonu" name="entry.774965994">
-        <input type="email" placeholder="Email" name="entry.1943066783">
-        <input type="radio" name="entry.1994805656" value="Solo">
-        <input type="radio" name="entry.1994805656" value="Z partnerem">
-        <select name="entry.491094824">
-            <option value="taniec">Tango</option>
-            <option value="taniec">Jazz</option>
-            <option value="taniec">Salsa</option>
-            <option value="taniec">Zumba</option>
-            <option value="taniec">Latino Solo</option>
-            <option value="taniec">Pilates</option>
-            <option value="taniec">Joga</option>
-            <option value="taniec">Gimnastyka</option>
-            <option value="taniec">Taniec użytkowy</option>
-        </select>-->
-        <input type="submit">
+        <label for="Imie">Imie:</label>
+        <input type="text" placeholder="Imie" id="Imie" name="entry.1782511083" required>
+        <label for="Nazwisko">Nazwisko:</label>
+        <input type="text" placeholder="Nazwisko" id="Nazwisko" name="entry.173465573">
+        <label for="nrTelefonu">Nr telefonu:</label>
+        <input type="text" placeholder="Nr telefonu" id="nrTelefonu" name="entry.774965994" required>
+        <label for="Email">Email:</label>
+        <input type="email" placeholder="Email" id="Email" name="entry.1943066783">
+        <div>
+            <label class="radio-label" for="Solo">Solo</label>
+            <input class="radio-input" type="radio" name="entry.1994805656" id="Solo" value="Solo" checked>
+        </div>
+        <div>
+            <label class="radio-label" for="Z_partnerem">Z partnerem</label>
+            <input class="radio-input" type="radio" name="entry.1994805656" id="Z_partnerem" value="Z partnerem">
+        </div>
+        <div class="clearfix"></div>
+        <input name="entry.491094824" value="<?php the_title()?>" type="hidden">
+        <button class="submitBtn" type="submit">Zapisz Się</button>
     </form>
-    <?php
-    $arg = array(
-        'posts_per_page' => 4,
-        'post_type' => 'post',
-        'category__not_in' => 5,
-    );
 
-    $last4POSTS = new WP_Query($arg);
-
-    if ($last4POSTS->have_posts()) {
-
-        while ($last4POSTS->have_posts()) {
-            $last4POSTS->the_post();
-            get_template_part('post-files/aside-last-posts');
-
-        }
-    }
-    ?>
 </div>

@@ -24,7 +24,7 @@
                     }
                 }
                 else{
-                    echo 'Nie ma nic';
+                    echo "Zapraszamy jutro <i class='fa fa-smile-o' aria-hidden='true'></i>";
                 }
                 ?>
             </div>

@@ -18,8 +18,6 @@ $(window).resize(function () {
 
 });
 
-
-
 $(document).ready(function () {
 
 
@@ -193,5 +191,91 @@ $(document).ready(function () {
 });
 
 
+//region google forms curl JS
+!function(exports) {
+    exports.submitGoogleForm = submitGoogleForm;
+
+    function submitGoogleForm(form) {
+        try {
+            var data = [].slice.call(form).map(function(control) {
+                return 'value' in control && control.name ?
+                control.name + '=' + (control.value === undefined ? '' : control.value) :
+                    '';
+            }).join('&');
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', form.action + '/formResponse', true);
+            xhr.setRequestHeader('Origin', 'https://docs.google.com');
+            xhr.setRequestHeader('Accept',
+                'application/xml, text/xml, */*; q=0.01');
+            xhr.setRequestHeader('Content-type',
+                'application/x-www-form-urlencoded; charset=UTF-8');
+            xhr.send(data);
+        } catch(e) {}
+
+        form.parentNode.className += ' submitted';
+
+        swal(
+            'Zapisałeś się!',
+            'Skontaktujemy się z Tobą, do zobaczenia na zajęciach :)',
+            'success'
+        );
+
+        return false;
+    }
+}(typeof module === 'undefined' ? window : module.exports);
+//endregion
 
 
+//region zapiszSie opoout
+
+/*toggle singin dive in dance post page*/
+$('#toggleSingIn').on('click',function(){
+    /*$('.aside-sing-in').toggle('slow');*/
+
+    if($('.singIn-container').css('display') == 'none'){
+        $('.singIn-container').fadeIn();
+    }
+    else{
+        $('.singIn-container').fadeOut();
+    }
+});
+
+/*toggle singin Div from menu lvl*/
+$('li#menu-item-286').on('click',function () {
+
+    if($('.singIn-container').css('display') == 'none'){
+        $('.singIn-container').fadeIn();
+    }
+    else{
+        $('.singIn-container').fadeOut();
+    }
+
+});
+
+
+$('.dance-form-toggle').on('click',function () {
+
+    var toggle_radio_div = $('.toggle-radio-div');
+
+    if($(this).find(toggle_radio_div).css('display') == 'none'){
+        toggle_radio_div.hide();
+        $(this).find(toggle_radio_div).toggle();
+    }
+    else{
+        $(this).find(toggle_radio_div).hide();
+    }
+});
+
+$('.radio-input').on('click',function () {
+    $(this).parent().parent().find('span').text($(this).html()).css('font-weight','700').css('color','rgba(210,32,39,0.9)');
+
+    $('#zajecia-input').val($(this).html());
+});
+
+$('.select-input').on('click',function () {
+    $(this).parent().parent().find('span').text($(this).html()).css('font-weight','700').css('color','rgba(210,32,39,0.9)');
+
+    $('#jakSie-input').val($(this).html());
+});
+//endregion
