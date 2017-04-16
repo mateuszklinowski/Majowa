@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Klinek
- * Date: 21.03.2017
- * Time: 01:56
- */
-?>
-
 
 <div class="latest-news-box">
 

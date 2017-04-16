@@ -14,7 +14,7 @@
 
         while ($last4POSTS->have_posts()) {
             $last4POSTS->the_post();
-            get_template_part('post-files/wydarzenia');
+            require (TEMPLATEPATH . '/templateParts/wydarzenia.php');
 
         }
     }

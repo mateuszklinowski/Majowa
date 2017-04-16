@@ -33,8 +33,7 @@ if ($last4POSTS->have_posts()) {
 
     while ($last4POSTS->have_posts()) {
         $last4POSTS->the_post();
-        get_template_part('post-files/teacher-classes-aside');
-
+        require (TEMPLATEPATH . '/templateParts/zajeciaTrenera.php');
     }
 }
 

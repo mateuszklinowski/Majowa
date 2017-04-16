@@ -1,8 +1,4 @@
-<?php
-
-get_header();
-
-?>
+<?php get_header(); ?>
 
 <div class="page-container">
 
@@ -14,6 +10,5 @@ get_header();
     <?php include (TEMPLATEPATH . '/inc/inc-instructors.php' ); ?>
 
 </div>
-
 
 <?php get_footer()?>
