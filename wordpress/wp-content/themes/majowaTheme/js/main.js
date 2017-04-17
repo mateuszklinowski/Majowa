@@ -24,7 +24,6 @@ $(document).ready(function () {
   //  $('.wcs3-day-col-6, .wcs3-day-col-0').css('display','none');
 
 
-
     $(".news-link-area").on('click',function () {
 
         window.location.href = this.id;
@@ -46,7 +45,8 @@ $(document).ready(function () {
 
     });
 
-    $('.wcs3-schedule-normal-layout > tbody > tr:nth-child(3)').after("<div class='classes-breake'></div>");
+    /* adding grey div in grafik breake between 11.30 and 15.30*/
+    $('.wcs3-schedule-normal-layout > tbody > tr:nth-child(5)').after("<div class='classes-breake'></div>");
 
    $('.classes-breake').css('width',$('.wcs3-schedule-normal-layout').width());
 
@@ -54,8 +54,9 @@ $(document).ready(function () {
 
 
     function testScroll(ev){
-        if(window.pageYOffset>100){
+        if(window.pageYOffset>100 && window.pageXOffset > 984){
             $(".sticky-header-container").css('top','0px');
+
         }
         else if(window.pageYOffset<100){
             $(".sticky-header-container").css('top','-70px');
@@ -65,6 +66,60 @@ $(document).ready(function () {
     window.onscroll=testScroll;
 
 
+    //region mobile menu
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault) {
+            e.preventDefault();
+        }
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) {
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        } // older FF
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove  = preventDefault; // mobile
+        document.onkeydown  = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener) {
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        }
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
+
+    $('.mobile-menu-button').click(function () {
+        $('.mobile-menu').toggleClass('openMenu');
+
+        console.log('d');
+
+        $('#nav-icon3').toggleClass('open');
+
+        if( $('#nav-icon3').hasClass('open')){
+
+            disableScroll();
+        }
+        else{
+            enableScroll();
+        }
+    });
+
+    //endregion
 
     //region match height
 
@@ -95,7 +150,6 @@ $(document).ready(function () {
 
 
     //endregion
-
 
     //region setting same height in row of images
    /* var max_productImage_height =0;
@@ -226,7 +280,6 @@ $(document).ready(function () {
 }(typeof module === 'undefined' ? window : module.exports);
 //endregion
 
-
 //region zapiszSie opoout
 
 /*toggle singin dive in dance post page*/
@@ -243,6 +296,17 @@ $('#toggleSingIn').on('click',function(){
 
 /*toggle singin Div from menu lvl*/
 $('li#menu-item-286').on('click',function () {
+
+    if($('.singIn-container').css('display') == 'none'){
+        $('.singIn-container').fadeIn();
+    }
+    else{
+        $('.singIn-container').fadeOut();
+    }
+
+});
+
+$('#zapiszSie').on('click',function () {
 
     if($('.singIn-container').css('display') == 'none'){
         $('.singIn-container').fadeIn();

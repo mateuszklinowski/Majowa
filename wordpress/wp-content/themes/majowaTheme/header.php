@@ -41,6 +41,67 @@ require_once 'classes/conn.php';
 
 <?php require (TEMPLATEPATH . '/inc/inc-header/header-singIn.php');?>
 
+<aside class="mobile-menu">
+    <button class="mobile-menu-button">
+        <div id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    <h1>
+        <a href="<?php echo get_home_url()?>">
+            <img alt="BBoost elo-boosting company" src="<?php echo get_template_directory_uri() ?>/img/logo-a4.png">
+        </a>
+    </h1>
+    <div class="separator"></div>
+    <nav>
+        <a id="zapiszSie">
+            <span class="nav-text">
+                ZAPISZ SIĘ!
+                <span></span>
+            </span>
+        </a>
+        <a class="red-font" href="<?php echo get_home_url()?>#grafik">
+            <span class="nav-text">
+                GRAFIK
+                <span></span>
+            </span>
+        </a>
+        <a href="<?php echo get_home_url()?>#zajecia">
+            <span class="nav-text">
+                ZAJĘCIA
+                <span></span>
+            </span>
+        </a>
 
+        <a href="<?php echo get_page_uri('51')?>">
+            <span class="nav-text">
+                O NAS
+                <span></span>
+            </span>
+        </a>
+        <a href="<?php echo get_page_uri('343')?>">
+            <span class="nav-text">
+                CENNIK
+                <span></span>
+            </span>
+        </a>
+        <a href="<?php echo get_page_uri('134')?>">
+            <span class="nav-text">
+                BLOG
+                <span></span>
+            </span>
+        </a>
+        <a href="<?php echo get_page_uri('17')?>">
+            <span class="nav-text">
+                KONTAKT
+                <span></span>
+            </span>
+        </a>
+    </nav>
+    <div class="separator"></div>
+</aside>
 
 
