@@ -10,8 +10,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        To więcej niż taniec to spotkanie mężczyzny i kobiety, rozmowa, pasja, objęcie.
                     </div>
                 </div>
             </div>
@@ -25,8 +24,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Uniwersalny rodzaj tańca, który można tańczyć do każdej muzyki.
                     </div>
                 </div>
             </div>
@@ -40,8 +38,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Kojarzy się z wakacjami, beztroską, przyjaciółmi, dobrą zabawą. I taka właśnie jest.
                     </div>
                 </div>
             </div>
@@ -57,8 +54,8 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Taniec solo oparty na idei baletu pozwala jednak na znacznie większą swobodę
+                        ruchu.
                     </div>
                 </div>
             </div>
@@ -72,8 +69,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Jest  jak zastrzyk pozytywnej energii, którą instruktorka stara się podzielić z całą grupą.
                     </div>
                 </div>
             </div>
@@ -87,8 +83,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Oprócz relaksu i poprawy humoru wyszczupla, dodaje seksapilu jak i umiejętności tanecznych.
                     </div>
                 </div>
             </div>
@@ -104,8 +99,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Aktywizuje i modeluje całe ciało. Sprzyja utrzymaniu równowagi w organizmie.
                     </div>
                 </div>
             </div>
@@ -119,8 +113,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Zapewnia równowagę ciala i umyslu,to idealny sposób na relaks w ciągu dnia.
                     </div>
                 </div>
             </div>
@@ -134,8 +127,7 @@
                     </div>
                     <span></span>
                     <div class="class-short-info">
-                        Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr.
+                        Ma na celu ogólne usprawnienie, równoważnie napięć mięśniowych i zniesienie bólu.
                     </div>
                 </div>
             </div>

@@ -228,6 +228,11 @@ body {
   height: 100%;
   width: auto;
 }
+@media screen and (max-width: 984px) {
+  .header-container header .header-logo-link {
+    float: right;
+  }
+}
 .header-container header .menu-container {
   position: relative;
   float: right;
@@ -243,7 +248,7 @@ body {
 .header-container header .menu-container .menu-main_nav_menu-container ul li {
   float: left;
   display: block;
-  height: 100%;
+  height: 85.44px;
   padding: 20px;
   line-height: 45px;
   font-size: 16px;
@@ -1081,15 +1086,9 @@ body {
     width: 100%;
   }
 }
-.contact-container .maps-container {
-  width: 45%;
-  float: right;
-  min-height: 100%;
-}
-@media screen and (max-width: 970px) {
-  .contact-container .maps-container {
-    width: 100%;
-  }
+.contact-container {
+  position: relative;
+  height: 100%;
 }
 .contact-container .contact-info-container {
   width: 55%;
@@ -1107,6 +1106,11 @@ body {
   float: left;
   font-size: 16px;
 }
+@media screen and (max-width: 660px) {
+  .contact-container .contact-info-container .contact-ways {
+    width: 100%;
+  }
+}
 .contact-container .contact-info-container .contact-ways h4 i {
   color: #D22027;
   min-width: 36px;
@@ -1118,8 +1122,23 @@ body {
   float: left;
   text-align: right;
 }
+@media screen and (max-width: 660px) {
+  .contact-container .contact-info-container .contact-adress {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 970px) {
   .contact-container .contact-info-container {
+    width: 100%;
+  }
+}
+.contact-container .maps-container {
+  width: 45%;
+  float: right;
+  height: 520px;
+}
+@media screen and (max-width: 970px) {
+  .contact-container .maps-container {
     width: 100%;
   }
 }
