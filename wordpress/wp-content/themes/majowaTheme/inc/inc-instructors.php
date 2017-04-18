@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="trainer">
-                <a href="<?php echo get_home_url()?>/?p=215">
+                <a href="<?php echo get_home_url()?>/?p=213">
                     <img src="<?php echo get_template_directory_uri() ?>/img/Facu.png">
                 </a>
                 <div class="trainer-info">

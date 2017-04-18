@@ -19,7 +19,7 @@
                     while(isset($classes[$i])){
                         $start_hour = date('H:i', strtotime($classes[$i]['start_hour']));
                         $end_hour = date('H:i', strtotime($classes[$i]['end_hour']));
-                        echo "<div class='classBlock'>".$start_hour." - ".$end_hour." <b>".$classes[$i]['class']."</b></div>";
+                        print_r ("<div class='classBlock'>".$start_hour." - ".$end_hour." <b>".$classes[$i]['class']."</b></div>");
                         $i++;
                     }
                 }

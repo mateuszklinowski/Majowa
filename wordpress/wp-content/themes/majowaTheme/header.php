@@ -57,21 +57,27 @@ require_once 'classes/conn.php';
     </h1>
     <div class="separator"></div>
     <nav>
-        <a id="zapiszSie">
+        <!--<a id="zapiszSie">
             <span class="nav-text">
                 ZAPISZ SIĘ!
                 <span></span>
             </span>
         </a>
-        <a class="red-font" href="<?php echo get_home_url()?>#grafik">
+        <a class="red-font" href="<?php /*echo get_home_url()*/?>#grafik">
             <span class="nav-text">
                 GRAFIK
                 <span></span>
             </span>
         </a>
-        <a href="<?php echo get_home_url()?>#zajecia">
+        <a href="<?php /*echo get_home_url()*/?>#zajecia">
             <span class="nav-text">
                 ZAJĘCIA
+                <span></span>
+            </span>
+        </a>-->
+        <a href="<?php echo get_home_url()?>">
+            <span class="nav-text">
+                DZIEJE SIĘ!
                 <span></span>
             </span>
         </a>

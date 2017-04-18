@@ -12,7 +12,7 @@ function processMyForm(){
 
     $data_subscriber = array(
         'user' => $user_data,
-        'user_list' => array('list_ids' => array(2)),
+        'user_list' => array('list_ids' => array(3)),
     );
 
     $helper_user = WYSIJA::get('user','helper');
@@ -26,9 +26,7 @@ function processMyForm(){
 
 if(isset($_POST['my_email_variable'])){
     add_action('init','processMyForm');
-
     processMyForm();
-
 };
 
 ?>
@@ -40,7 +38,7 @@ if(isset($_POST['my_email_variable'])){
             <br/>
             a nie ominie Cię żadne taneczne wydarzenie!
         </p>
-        <form method="POST" action="http://localhost#newsletter">
+        <form method="POST" action="<?php echo get_home_url()?>">
         <div class="input-group">
 
                 <input placeholder="Wpisz adres email" name="my_email_variable" type="text">
