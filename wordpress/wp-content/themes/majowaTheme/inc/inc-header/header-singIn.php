@@ -2,6 +2,10 @@
     <form method="POST" action="https://docs.google.com/forms/d/1HLmqkR4ULHnNvPxnjtUHdotzSLjp5UIIndsMk4FrqkE"
           onsubmit="return window.submitGoogleForm(this);">
 
+        <div>
+
+            <a class="boxclose" id="closeSingIn"></a>
+        </div>
         <div class="dance-form-btn dance-form-toggle" id="wParze">
             <img src="<?php echo get_template_directory_uri()?>/img/icons/w_parach.png">
             <span>W PARZE</span> <i class="fa fa-chevron-down fa-x2" aria-hidden="true"></i>

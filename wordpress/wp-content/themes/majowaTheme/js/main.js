@@ -314,9 +314,11 @@ $('#zapiszSie').on('click',function () {
     else{
         $('.singIn-container').fadeOut();
     }
-
 });
 
+$('#closeSingIn').on('click',function () {
+    $('.singIn-container').fadeOut();
+});
 
 $('.dance-form-toggle').on('click',function () {
 
