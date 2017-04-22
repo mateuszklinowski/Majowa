@@ -129,7 +129,7 @@
   position: fixed;
   left: 0;
   z-index: 2;
-  top:50%;
+  top:30%;
   transform: translateY(-50%);
 }
 //endregion
@@ -385,6 +385,7 @@ body{
   }
 
   .news-container{
+    position: relative;
     h2{
       .h2-style;
 
@@ -400,13 +401,17 @@ body{
     }
 
     .news-box{
+      position: relative;
       margin: 0;
       padding: 0;
+      overflow: hidden;
 
       .single-news{
-        position: relative;
+        position: absolute;
+        left: 0;
+        top:0;
         cursor: pointer;
-        float: left;
+
         width: 33.33%;
 
         @media screen and (max-width: 1000px){
@@ -474,6 +479,11 @@ body{
             }
           }
 
+        -webkit-transition: left 0.2s ease-out;
+        -moz-transition: left 0.2s ease-out;
+        -ms-transition: left 0.2s ease-out;
+        -o-transition: left 0.2s ease-out;
+        transition: left 0.2s ease-out;
       }
 
     }
@@ -498,6 +508,29 @@ body{
         transition: all 0.5s;
         color: @majowaRed;
         border-bottom: 1px solid @majowaRed;
+      }
+    }
+
+    .newsBox-slideBtn{
+      background: transparent;
+      position: absolute;
+      top:50%;
+      width: 50px;
+      height: 100px;
+      zoom: 1.3;
+      border: none;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      outline: none !important;
+
+      &#news-slideRight{
+        right:-30px;
+      }
+      &#news-slideLeft{
+        left:-30px;
       }
     }
   }

@@ -1,0 +1,1 @@
+<button class="dance-btn" id="<?php the_permalink()?>"><?php the_title() ?></button>

@@ -7,7 +7,7 @@
         <div class="news-box">
             <?php
             $arg=array(
-                'posts_per_page' => 3,
+                'posts_per_page' => 9,
                 'post_type' => 'post',
                 'category__not_in' => [9,10],
             );
@@ -21,6 +21,8 @@
             ?>
             <div class="clearfix"></div>
         </div>
+        <button class="newsBox-slideBtn" id="news-slideRight"><i class="fa fa-angle-double-right fa-4x" aria-hidden="true"></i></button>
+        <button class="newsBox-slideBtn" id="news-slideLeft"><i class="fa fa-angle-double-left fa-4x" aria-hidden="true"></i></button>
         <a class="blog-button" href="<?php echo get_home_url()?>">WIĘCEJ</a>
     </div>
 </div>

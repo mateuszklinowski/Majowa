@@ -1,5 +1,6 @@
 
 
+
     <div class="single-news news-link-area" id="<?php echo get_permalink()?>">
         <div class="post-thumbnail-box" style="background: url(<?php the_post_thumbnail_url() ?>)center no-repeat; background-size: cover">
 
