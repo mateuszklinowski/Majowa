@@ -41,6 +41,19 @@ $(document).ready(function () {
 
     });
 
+    //region top menu dropdown elements
+    var collapseTopMenu = $('.menu-item-has-children');
+    var drop_down_item = $('.sub-menu');
+
+    var dropdown_right = $(window).width() - (collapseTopMenu.offset().left + collapseTopMenu.outerWidth());
+    var dropdown_top = collapseTopMenu.offset().top + collapseTopMenu.outerHeight();
+
+    drop_down_item.css('right', dropdown_right);
+    drop_down_item.css('top',dropdown_top);
+
+    //endregion
+
+
     /* adding grey div in grafik breake between 11.30 and 15.30*/
     $('.wcs3-schedule-normal-layout > tbody > tr:nth-child(5)').after("<div class='classes-breake'></div>");
 
@@ -51,7 +64,7 @@ $(document).ready(function () {
     function testScroll(ev){
         if(window.pageYOffset>100 && window.innerWidth > 984){
             $(".sticky-header-container").css('top','0px');
-            console.log(2);
+
         }
         else if(window.pageYOffset<100){
             $(".sticky-header-container").css('top','-70px');
@@ -190,15 +203,17 @@ $(document).ready(function () {
 
         element.each(function () {
 
-            if(i%2 == 0){
+            if(i%2 === 0){
                 element_1_height = $(this).height();
                 element_2_height = $(this).next().height();
 
                 if (element_1_height > element_2_height){
                     max_height =  element_1_height;
+                    max_height += 40;
                 }
                 else{
-                    max_height =  element_2_height
+                    max_height =  element_2_height;
+                    max_height += 40;
                 }
 
                 $(this).css('height',max_height);
@@ -224,13 +239,13 @@ $(document).ready(function () {
 
     //endregion
 
-
-
     //region blog-post slider
 
     var newsPostDiv = $('.single-news');
     var newsPostWrapperDiv = $('.news-box');
-    newsPostWrapperDiv.height(newsPostDiv.height()); //set parent height acording to absolute child
+    newsPostWrapperDiv.height(function () {
+        return newsPostDiv.height() + 50;
+    }); //set parent height acording to absolute child
 
     var i = 0;
     var newsPostWidth;
@@ -288,7 +303,9 @@ $(document).ready(function () {
     });
 
     $(window).resize(function(){
-        newsPostWrapperDiv.height(newsPostDiv.height());
+        newsPostWrapperDiv.height(function () {
+            return newsPostDiv.height() + 50;
+        }); //set parent height acording to absolute child
         i = 0;
         newsPostDiv.each(function () {
             newsPostWidth = newsPostDiv.width();
@@ -353,8 +370,19 @@ $('#toggleSingIn').on('click',function(){
     }
 });
 
+
 /*toggle singin Div from menu lvl*/
-$('li#menu-item-436').on('click',function () {
+/*$('li#menu-item-436').on('click',function () {
+
+    if($('.singIn-container').css('display') == 'none'){
+        $('.singIn-container').fadeIn();
+    }
+    else{
+        $('.singIn-container').fadeOut();
+    }
+
+});*/
+$('li#menu-item-286').on('click',function () {
 
     if($('.singIn-container').css('display') == 'none'){
         $('.singIn-container').fadeIn();
@@ -379,28 +407,13 @@ $('#closeSingIn').on('click',function () {
     $('.singIn-container').fadeOut();
 });
 
-$('.dance-form-toggle').on('click',function () {
+//endregion
 
-    var toggle_radio_div = $('.toggle-radio-div');
+//region activate pricelist accordion
 
-    if($(this).find(toggle_radio_div).css('display') == 'none'){
-        toggle_radio_div.hide();
-        $(this).find(toggle_radio_div).toggle();
-    }
-    else{
-        $(this).find(toggle_radio_div).hide();
-    }
-});
+    var pricelist = $('#accordion');
 
-$('.radio-input').on('click',function () {
-    $(this).parent().parent().find('span').text($(this).html()).css('font-weight','700').css('color','rgba(210,32,39,0.9)');
-
-    $('#zajecia-input').val($(this).html());
-});
-
-$('.select-input').on('click',function () {
-    $(this).parent().parent().find('span').text($(this).html()).css('font-weight','700').css('color','rgba(210,32,39,0.9)');
-
-    $('#jakSie-input').val($(this).html());
-});
+$( function() {
+    pricelist.accordion();
+} );
 //endregion

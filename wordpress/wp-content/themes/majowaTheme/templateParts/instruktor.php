@@ -1,6 +1,6 @@
 <?php $custom = get_post_custom(); ?>
 <div class="trainer">
-    <a href="<?php echo get_permalink()?>/?p=195">
+    <a href="<?php echo get_permalink()?>">
         <img src="<?php echo wp_get_attachment_image_url($custom['miniaturka'][0]); ?>">
     </a>
     <div class="trainer-info">

@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="instructors-container">
+    <div class="instructors-container" id="instruktorzy">
         <h2>Instruktorzy</h2>
         <div class="instructors-box">
 

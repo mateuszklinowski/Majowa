@@ -7,9 +7,23 @@
         <div class="news-box">
             <?php
             $arg=array(
-                'posts_per_page' => 9,
+                'posts_per_page' => 3,
                 'post_type' => 'post',
-                'category__not_in' => [9,10],
+                'category__in' => [14],
+            );
+            $last4POSTS = new WP_Query($arg);
+            if ($last4POSTS ->have_posts()){
+                while ( $last4POSTS ->have_posts()){
+                    $last4POSTS->the_post();
+                    require (TEMPLATEPATH . '/templateParts/frontPageNews.php');
+                }
+            }
+            ?>
+            <?php
+            $arg=array(
+                'posts_per_page' => 6,
+                'post_type' => 'post',
+                'category__not_in' => [9,10,14],
             );
             $last4POSTS = new WP_Query($arg);
             if ($last4POSTS ->have_posts()){

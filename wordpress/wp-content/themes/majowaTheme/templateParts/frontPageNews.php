@@ -8,7 +8,12 @@
 <!--        <img class="single-news-photo" src=" --><?php //the_post_thumbnail_url(); ?><!-- ">-->
         <div class="news-category"><?php
             $categories = get_the_category();
-            echo $categories[0]->name;
+            if ($categories[0]->name == 'Ważne'){
+                echo $categories[1]->name;
+            }else{
+                echo $categories[0]->name;
+            }
+
             ?>
         </div>
         <div class="single-news-text">

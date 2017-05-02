@@ -35,4 +35,16 @@ ORDER BY start_hour");
         $classes->execute();
         return $classes->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getAllClasses(){
+        $allCLasses = $this->conn->prepare("
+        SELECT DISTINCT
+C.post_title as class
+FROM wp_wcs3_schedule S
+LEFT JOIN (SELECT * FROM wp_posts WHERE post_type = 'wcs3_class') C 
+ON S.class_id = C.ID LEFT JOIN (SELECT * FROM wp_posts WHERE post_type = 'wcs3_instructor') I on S.instructor_id = I.ID
+ORDER BY class");
+        $allCLasses->execute();
+        return $allCLasses->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
