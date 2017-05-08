@@ -322,16 +322,15 @@ body{
                 opacity: 0;
                 padding: 0;
                 display: none;
-                background: rgba(255,255,255,0.8);
+
                 color: black;
                 position: fixed;
                 width: 170px;
-                height: 70px;
+                height: 140px;
                 z-index: 11;
-                &:hover{
-                  background: rgba(255,255,255,0.95);
-                }
                 li{
+                  border-bottom: 1px solid transparent;
+                  background: rgba(255,255,255,0.8);
                   width: 100%;
                   padding: 0;
                   height: auto;
@@ -340,6 +339,10 @@ body{
                     color: black;
                     height: auto;
                     line-height: 70px;
+                  }
+                  &:hover{
+                    border-bottom: 1px solid @majowaRed;
+                    background: rgba(255,255,255,0.95);
                   }
                 }
               }
