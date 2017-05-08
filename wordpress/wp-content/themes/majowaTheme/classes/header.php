@@ -82,27 +82,25 @@ require_once 'classes/conn.php';
             </span>
         </a>
 
-        <a href="<?php
-        echo get_home_url().'/'.get_page_uri('51');
-        ?>">
+        <a href="<?php echo get_page_uri('51')?>">
             <span class="nav-text">
                 O NAS
                 <span></span>
             </span>
         </a>
-        <a href="<?php echo get_home_url().'/'.get_page_uri('343')?>">
+        <a href="<?php echo get_page_uri('343')?>">
             <span class="nav-text">
                 CENNIK
                 <span></span>
             </span>
         </a>
-        <a href="<?php echo get_home_url().'/'.get_page_uri('134')?>">
+        <a href="<?php echo get_page_uri('134')?>">
             <span class="nav-text">
                 BLOG
                 <span></span>
             </span>
         </a>
-        <a href="<?php echo get_home_url().'/'.get_page_uri('17')?>">
+        <a href="<?php echo get_page_uri('17')?>">
             <span class="nav-text">
                 KONTAKT
                 <span></span>

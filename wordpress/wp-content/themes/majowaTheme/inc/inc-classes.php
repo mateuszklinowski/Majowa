@@ -2,7 +2,7 @@
     <div class="classes-container" id="zajecia">
         <h2 class="classes-type">W PARZE</h2>
         <div class="classes-box">
-            <div class="single-class">
+            <div class="single-class solo-class">
                 <img src="<?php echo get_template_directory_uri() ?>/img/zajecia/TANGO.jpg">
                 <div class="class-hover" id="<?php echo get_home_url()?>/?p=219">
                     <div class="class-name">

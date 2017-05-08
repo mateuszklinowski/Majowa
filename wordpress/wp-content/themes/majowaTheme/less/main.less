@@ -130,7 +130,22 @@
 }
 
 #toggleSingIn{
+  display: block;
   cursor: pointer;
+  border: 5px solid @majowaRed;
+  border-radius: 25px;
+  height: 50px;
+  width: 220px;
+  background: transparent;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 35px auto 10px auto;
+  .transitionAll;
+  &:hover{
+    background: @majowaRed;
+    color: white;
+  }
 }
 
 //region facebook btn
@@ -986,22 +1001,16 @@ body{
 
   }
   .aside-container{
-
     position: relative;
     width: 30%;
     float: left;
-
     padding: 30px 10px 60px 30px;
     border-left: 1px solid @strong-red-code;
-
-
     h3{
       text-align: left;
       font-weight: 700;
       margin:40px 0 20px 0;
     }
-
-
     .latest-news-box{
 
       overflow: hidden;
@@ -1041,8 +1050,6 @@ body{
         }
       }
     }
-
-
     .aside-social-container{
       margin: 20px 10px;
       .aside-facebook-btn{
@@ -1070,10 +1077,37 @@ body{
         }
       }
     }
-
-
     @media screen and (max-width: 1000px){
       width: 100%;
+    }
+
+
+    .class-info-container{
+      width: ~"calc(100% + 60px)";
+      max-width: 375px;
+      margin:0 -30px 0 -30px;
+      h3{
+        display: block;
+        background: @majowaRed;
+        color: white;
+        text-align: center;
+        font-weight: normal;
+        line-height: 45px;
+        font-size: 18px;
+        margin:20px 0 20px 0
+      }
+      p{
+        text-align: center;
+        font-size: 20px;
+        @media screen and (max-width: 1200px){
+          font-size: 18px;
+        }
+        @media screen and (max-width: 1000px){
+          font-size: 22px;
+        }
+        color: black;
+        margin: 15px 10px 15px 10px;
+      }
     }
   }
 }
@@ -1186,37 +1220,38 @@ footer{
       font-weight: 700;
     }
   }
+  #accordion{
+    .col-sm-2, .col-sm-6{
+      padding: 0;
+    }
+    h3{
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      padding: 0  0 0 15px;
+      outline:  none;
+      &.ui-state-active{
+        background: @majowaRed;
+        border:1px solid black;
+      }
+    }
+    .column-title{
+      line-height: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      height: 50px;
+      display: block;
+    }
+    .column-content{
+      border-bottom: 1px solid black;
+      font-size: 16px;
+      line-height: 40px;
 
-#accordion{
-  .col-sm-2, .col-sm-6{
-    padding: 0;
-  }
-  h3{
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    padding: 0  0 0 15px;
-    outline:  none;
-    &.ui-state-active{
-      background: @majowaRed;
-      border:1px solid black;
     }
   }
-  .column-title{
-    line-height: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    height: 50px;
-    display: block;
-  }
-  .column-content{
-    border-bottom: 1px solid black;
-    font-size: 16px;
-    line-height: 40px;
+}
 
-  }
-}
-}
+/*accordion style*/
 
 .main-text-container{
   text-align: center;
@@ -1250,15 +1285,16 @@ footer{
     transform: translate(-50%,-50%);
     background: white;
     padding: 25px;
-    width: 890px;
+    width: 930px;
 
     .singIn-column{
       margin: 0 5px;
       min-height: 310px;
-      width: 270px;
+      width: 295px;
       float: left;
       height: auto;
       &.columnWithBorders{
+        width: 250px;
         border-right:3px solid @themeGery;
         border-left:3px solid @themeGery;
         h4{
@@ -1272,11 +1308,18 @@ footer{
       }
     }
 
+    .singIn-instructor{
+      display: none;
+    }
+    .singIn-hour{
+      display: none;
+    }
+
     .singIn-selectBtn{
       cursor: pointer;
       position: relative;
       padding: 0;
-      width: 240px;
+      width: 295px;
       display: block;
       height: 80px;
       margin: 20px auto;
@@ -1347,6 +1390,12 @@ footer{
       &:hover{
         background-color: rgba(210,32,39,0.95);
       }
+      a{
+        color: white;
+        &:hover{
+          text-decoration: none;
+        }
+      }
     }
 
     .singIn-form-inputs{
@@ -1408,6 +1457,20 @@ footer{
         text-decoration: none;
       }
     }
+
+  }
+  .singIn-pricelist-container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    display: none;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 150;
+    background: red;
   }
 
 

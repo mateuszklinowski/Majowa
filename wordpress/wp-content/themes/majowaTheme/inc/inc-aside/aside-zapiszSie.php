@@ -1,6 +1,8 @@
-<h3 id="toggleSingIn">Zapisz się <i class="fa fa-chevron-down fa-x2" aria-hidden="true"></i></h3>
+<!--!!!  moved to aside-informacje.php !!!!!!-->
+
+<!--<button id="toggleSingIn">ZAPISZ SIĘ</button>-->
 <!--Latest 4 posts-->
-<div class="aside-sing-in">
+<!--<div class="aside-sing-in">
     <form method="POST"
           action="https://docs.google.com/forms/d/1HLmqkR4ULHnNvPxnjtUHdotzSLjp5UIIndsMk4FrqkE"
           onsubmit="return window.submitGoogleForm(this);">
@@ -21,8 +23,8 @@
             <input class="radio-input" type="radio" name="entry.1994805656" id="Z_partnerem" value="Z partnerem">
         </div>
         <div class="clearfix"></div>
-        <input name="entry.491094824" value="<?php the_title()?>" type="hidden">
+        <input name="entry.491094824" value="<?php /*the_title()*/?>" type="hidden">
         <button class="submitBtn" type="submit">Zapisz Się</button>
     </form>
 
-</div>
+</div>-->

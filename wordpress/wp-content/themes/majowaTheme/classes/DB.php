@@ -47,4 +47,30 @@ ORDER BY class");
         $allCLasses->execute();
         return $allCLasses->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getInstructor(){
+        $allCLasses = $this->conn->prepare("SELECT I.post_title as instructor, C.post_title as class FROM wp_posts I 
+join wp_wcs3_schedule S on I.ID = S.instructor_id 
+join (SELECT * FROM wp_posts WHERE post_type = 'wcs3_class') C on C.ID = S.class_id 
+group by (I.post_title)
+");
+            $allCLasses->execute();
+            return  $allCLasses->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+    public function getHours(){
+        $allCLasses = $this->conn->prepare("SELECT
+start_hour,
+end_hour,
+C.post_title as class,
+weekday
+FROM wp_wcs3_schedule S
+LEFT JOIN (SELECT * FROM wp_posts WHERE post_type = 'wcs3_class') C 
+ON S.class_id = C.ID LEFT JOIN (SELECT * FROM wp_posts WHERE post_type = 'wcs3_instructor') I on S.instructor_id = I.ID
+ORDER BY weekday
+");
+        $allCLasses->execute();
+        return  $allCLasses->fetchAll(PDO::FETCH_ASSOC);
+
+    }
 }

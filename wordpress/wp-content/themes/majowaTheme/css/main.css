@@ -129,7 +129,26 @@
   transition: all 0.3s;
 }
 #toggleSingIn {
+  display: block;
   cursor: pointer;
+  border: 5px solid #D22027;
+  border-radius: 25px;
+  height: 50px;
+  width: 220px;
+  background: transparent;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 35px auto 10px auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#toggleSingIn:hover {
+  background: #D22027;
+  color: white;
 }
 .facebook-btn {
   position: fixed;
@@ -1181,6 +1200,37 @@ body {
     width: 100%;
   }
 }
+.index-container .aside-container .class-info-container {
+  width: calc(100% + 60px);
+  max-width: 375px;
+  margin: 0 -30px 0 -30px;
+}
+.index-container .aside-container .class-info-container h3 {
+  display: block;
+  background: #D22027;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  line-height: 45px;
+  font-size: 18px;
+  margin: 20px 0 20px 0;
+}
+.index-container .aside-container .class-info-container p {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  margin: 15px 10px 15px 10px;
+}
+@media screen and (max-width: 1200px) {
+  .index-container .aside-container .class-info-container p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .index-container .aside-container .class-info-container p {
+    font-size: 22px;
+  }
+}
 .contact-container {
   position: relative;
   height: 100%;
@@ -1303,6 +1353,7 @@ footer:before {
   font-size: 16px;
   line-height: 40px;
 }
+/*accordion style*/
 .main-text-container {
   text-align: center;
   margin-bottom: 40px;
@@ -1328,16 +1379,17 @@ footer:before {
   transform: translate(-50%, -50%);
   background: white;
   padding: 25px;
-  width: 890px;
+  width: 930px;
 }
 .singIn-container .singIn-form-container .singIn-column {
   margin: 0 5px;
   min-height: 310px;
-  width: 270px;
+  width: 295px;
   float: left;
   height: auto;
 }
 .singIn-container .singIn-form-container .singIn-column.columnWithBorders {
+  width: 250px;
   border-right: 3px solid #33333a;
   border-left: 3px solid #33333a;
 }
@@ -1349,11 +1401,17 @@ footer:before {
   font-weight: 700;
   text-align: center;
 }
+.singIn-container .singIn-form-container .singIn-instructor {
+  display: none;
+}
+.singIn-container .singIn-form-container .singIn-hour {
+  display: none;
+}
 .singIn-container .singIn-form-container .singIn-selectBtn {
   cursor: pointer;
   position: relative;
   padding: 0;
-  width: 240px;
+  width: 295px;
   display: block;
   height: 80px;
   margin: 20px auto;
@@ -1428,6 +1486,12 @@ footer:before {
 .singIn-container .singIn-form-container .singIn-pricelistBtn:hover {
   background-color: rgba(210, 32, 39, 0.95);
 }
+.singIn-container .singIn-form-container .singIn-pricelistBtn a {
+  color: white;
+}
+.singIn-container .singIn-form-container .singIn-pricelistBtn a:hover {
+  text-decoration: none;
+}
 .singIn-container .singIn-form-container .singIn-form-inputs label {
   font-size: 16px;
   text-align: left;
@@ -1485,6 +1549,19 @@ footer:before {
 }
 .singIn-container .singIn-form-container .boxclose:before:hover {
   text-decoration: none;
+}
+.singIn-container .singIn-pricelist-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 150;
+  background: red;
 }
 .aside-sing-in {
   display: none;

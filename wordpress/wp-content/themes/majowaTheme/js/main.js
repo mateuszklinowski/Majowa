@@ -356,7 +356,35 @@ $(document).ready(function () {
 }(typeof module === 'undefined' ? window : module.exports);
 //endregion
 
-//region zapiszSie opoout
+//region zapiszSie popout form
+
+
+var danceBtn = $('.singIn-danceBtn');
+
+danceBtn.on('click',function(){
+    $('#zajecia-input').val($(this).html());
+
+    if($(this).hasClass('pairs')){
+        $('.selected-course.solo').html('Solo');
+        $('.selected-course.pairs').html($(this).html());
+    }
+    else if($(this).hasClass('solo')){
+        $('.selected-course.pairs').html('W Parach');
+        $('.selected-course.solo').html($(this).html());
+    }
+
+    var data_class = $('#zajecia-input').val();
+    $('.singIn-instructor').css('display','none');
+    $("p[data-class='"+data_class+"']").css('display','block');
+
+    $('.singIn-hour').css('display','none');
+    $("p[data-hour='"+data_class+"']").css('display','block');
+
+
+
+
+
+});
 
 /*toggle singin dive in dance post page*/
 $('#toggleSingIn').on('click',function(){
@@ -408,6 +436,10 @@ $('#closeSingIn').on('click',function () {
 });
 
 //endregion
+
+
+
+
 
 //region activate pricelist accordion
 

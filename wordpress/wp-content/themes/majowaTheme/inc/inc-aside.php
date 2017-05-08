@@ -6,6 +6,8 @@
         include (TEMPLATEPATH . '/inc/inc-aside/aside-zajeciaTrenera.php');
     }
     else if ($category[0] -> name == 'Taniec'){
+        include (TEMPLATEPATH . '/inc/inc-aside/aside-informacje.php');
+
         include (TEMPLATEPATH . '/inc/inc-aside/aside-zapiszSie.php');
     }
     ?>
