@@ -30,11 +30,11 @@ $(document).ready(function () {
         window.location.href = this.id;
 
     });
-    $(".class-hover").on('click',function () {
+/*    $(".class-hover").on('click',function () {
 
         window.location.href = this.id;
 
-    });
+    });*/
     $(".dance-btn").on('click',function () {
 
         window.location.href = this.id;

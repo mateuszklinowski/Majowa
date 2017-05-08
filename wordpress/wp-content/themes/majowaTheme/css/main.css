@@ -632,51 +632,6 @@ body {
 .page-container .news-container .newsBox-slideBtn#news-slideLeft {
   left: -30px;
 }
-.page-container .classes-container h2 {
-  text-align: center;
-  font-size: 40px;
-  color: #33333a;
-  margin-bottom: 60px;
-  text-transform: uppercase;
-  margin-top: 0;
-}
-.page-container .classes-container h2.classes-type {
-  z-index: 1;
-  position: relative;
-  margin-bottom: 30px;
-  margin-top: 50px;
-}
-.page-container .classes-container h2.classes-type:before {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 2px;
-  background: #D22027;
-  z-index: -2;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.page-container .classes-container h2.classes-type:after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  background: #D22027;
-  z-index: -1;
-  background: white;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
 .page-container .classes-container .single-class {
   cursor: pointer;
   position: relative;
@@ -714,26 +669,60 @@ body {
   background: rgba(255, 255, 255, 0.8);
   color: #33333a;
   z-index: 2;
-  padding: 0 5% 10px 5%;
+  padding: 12% 5% 10px 5%;
   text-align: center;
 }
-.page-container .classes-container .single-class .class-hover .class-name {
-  margin-bottom: 0;
-  font-size: 21px;
-  text-align: center;
+.page-container .classes-container .single-class .class-hover .classes-links-container {
   width: 100%;
-  margin-top: 12%;
-}
-.page-container .classes-container .single-class .class-hover span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: block;
-  height: 2px;
-  width: 30px;
-  background-color: #D22027;
-  margin: 10px auto 15px auto;
+}
+.page-container .classes-container .single-class .class-hover .single-class-link {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  line-height: 75px;
+  border-bottom: 1px solid transparent;
+}
+.page-container .classes-container .single-class .class-hover .single-class-link:hover {
+  border-bottom: 1px solid white;
+  text-decoration: none;
 }
 .page-container .classes-container .single-class:hover .class-hover {
   visibility: visible;
   opacity: 1;
+}
+.page-container .classes-container .single-class:hover .class-category {
+  display: none;
+}
+.page-container .classes-container .single-class .class-category {
+  color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 65px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 65px;
+  width: 290px;
+  text-align: center;
 }
 .page-container .newsletter-container i {
   display: block;

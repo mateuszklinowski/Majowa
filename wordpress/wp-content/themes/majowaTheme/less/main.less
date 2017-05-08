@@ -601,10 +601,6 @@ body{
   }
 
   .classes-container{
-    h2{
-      .h2-style;
-      margin-top: 0;
-    }
     .single-class{
       cursor: pointer;
       position: relative;
@@ -640,24 +636,34 @@ body{
         background: rgba(255,255,255,0.8);
         color: @themeGery;
         z-index: 2;
-
-        padding: 0 5% 10px 5%;
-
+        padding: 12% 5% 10px 5%;
         text-align: center;
-        .class-name{
-          margin-bottom: 0;
-          font-size: 21px;
-          text-align: center;
-          width: 100%;
-          margin-top: 12%;
 
-        }
-        span{
+        .classes-links-container{
+          width: 100%;
+          position: absolute;
+          top:50%;
+          left:50%;
+          -webkit-transform: translate(-50%,-50%);
+          -moz-transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+          -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
           display: block;
-          height: 2px;
-          width: 30px;
-          background-color: @strong-red-code;
-          margin: 10px auto 15px auto;
+        }
+        .single-class-link{
+          font-size: 36px;
+          font-weight: 700;
+          color: black;
+          cursor: pointer;
+          display: block;
+          text-align: center;
+          line-height: 75px;
+          border-bottom: 1px solid transparent;
+          &:hover{
+            border-bottom: 1px solid white;
+            text-decoration: none;
+          }
         }
       }
       &:hover{
@@ -666,6 +672,30 @@ body{
           visibility: visible;
           opacity: 1;
         }
+        .class-category{
+          display: none;
+        }
+      }
+
+      .class-category{
+        color: black;
+        display: block;
+        position: absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        min-height:65px;
+        background: rgba(255,255,255,0.8);
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 65px;
+        width: 290px;
+        text-align: center;
+
       }
     }
   }
