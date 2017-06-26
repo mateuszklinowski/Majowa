@@ -1,4 +1,8 @@
-console.log('Js work');
+
+
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+};
 
 var thumbnail = $('.post-thumbnail-box');
 
@@ -20,6 +24,15 @@ $(window).resize(function () {
 
 $(document).ready(function () {
 
+    //region activate pricelist accordion
+
+
+    $( function() {
+        $('.accordion').accordion();
+    } );
+
+//endregion
+
     $(".news-link-area").on('click',function () {
 
         window.location.href = this.id;
@@ -30,11 +43,6 @@ $(document).ready(function () {
         window.location.href = this.id;
 
     });
-/*    $(".class-hover").on('click',function () {
-
-        window.location.href = this.id;
-
-    });*/
     $(".dance-btn").on('click',function () {
 
         window.location.href = this.id;
@@ -68,7 +76,7 @@ $(document).ready(function () {
         }
         else if(window.pageYOffset<100){
             $(".sticky-header-container").css('top','-70px');
-            console.log('ss');
+
         }
     }
     window.onscroll=testScroll;
@@ -113,7 +121,7 @@ $(document).ready(function () {
     $('.mobile-menu-button').click(function () {
         $('.mobile-menu').toggleClass('openMenu');
 
-        console.log('d');
+
 
         $('#nav-icon3').toggleClass('open');
 
@@ -137,10 +145,10 @@ $(document).ready(function () {
             if($(this).height() > maxHeight){
                 maxHeight = $(this).height();
             }
-            console.log($(this).height());
+
 
         });
-        console.log(maxHeight);
+
         return maxHeight;
     }
     function setSameHeight(element,maxHeight){
@@ -149,48 +157,6 @@ $(document).ready(function () {
             $(this).css('height',maxHeight);
         });
     }
-
-    //setSameHeight(single_news_text,findMaxHeight(single_news_text));
-
-
-    //endregion
-
-    //region setting same height in row of images
-   /* var max_productImage_height =0;
-
-    var product_box = $('.blog-post-container');
-
-    function set_max_height(element){
-
-        max_productImage_height = 0;
-        element.each(function () {
-
-            if($(this).height() > max_productImage_height){
-
-                max_productImage_height = $(this).height();
-            }
-        });
-        console.log(max_productImage_height);
-        return max_productImage_height;
-
-    }
-
-    function set_same_height(element){
-        element.each(function(){
-            $(this).css('height',set_max_height(element));
-        });
-    }
-
-    set_same_height(product_box);
-
-    $(window).resize(function(){
-        product_box.height('auto');
-
-        set_max_height(product_box);
-        set_same_height(product_box)
-
-    });
-*/
 
 
 
@@ -218,7 +184,6 @@ $(document).ready(function () {
 
                 $(this).css('height',max_height);
                 $(this).next().css('height',max_height);
-                console.log(max_height);
 
                 element_1_height = 0;
                 element_2_height = 0;
@@ -241,6 +206,7 @@ $(document).ready(function () {
 
     //region blog-post slider
 
+/*
     var newsPostDiv = $('.single-news');
     var newsPostWrapperDiv = $('.news-box');
     newsPostWrapperDiv.height(function () {
@@ -265,7 +231,7 @@ $(document).ready(function () {
 
         if(rightLimit < -1 || rightLimit > 1){
 
-            console.log(newsPostDiv.last().css('left'));
+
             newsPostDiv.each(function(){
                 current_left_value = $(this).css('left');
                 current_left_value = current_left_value.slice(0,-2);
@@ -314,9 +280,14 @@ $(document).ready(function () {
         });
     });
 
+*/
 
     //endregion
 
+    //region singInform JS
+
+
+    //endregion
 
 });
 
@@ -360,19 +331,35 @@ $(document).ready(function () {
 
 
 var danceBtn = $('.singIn-danceBtn');
+var classSelect = $('.kurs');
 
+
+
+classSelect.on('click',function(){
+    $('#zajecia-input').val($(this).val());
+
+    var data_class = $('#zajecia-input').val();
+    $('.singIn-instructor').css('display','none');
+
+
+    $("p[data-class='"+data_class+"']").css('display','block');
+    $("p[data-class='']").css('display','block');
+
+    $('.singIn-hour').css('display','none');
+    $("p[data-hour='"+data_class+"']").css('display','block');
+
+});
 danceBtn.on('click',function(){
-    $('#zajecia-input').val($(this).html());
+    /*$('#zajecia-input').val($(this).html());*/
 
-    if($(this).hasClass('pairs')){
-        $('.selected-course.solo').html('Solo');
-        $('.selected-course.pairs').html($(this).html());
-    }
-    else if($(this).hasClass('solo')){
-        $('.selected-course.pairs').html('W Parach');
-        $('.selected-course.solo').html($(this).html());
-    }
+    var classID=$(this).attr('id'); /* get id attr*/
 
+    $('.singIn-option').css('display','none');
+    $("."+classID).css('display','block');
+
+    classSelect.prop('selectedIndex',0);/*reset select to default*/
+
+    $('#zajecia-input').val(classSelect.val());
     var data_class = $('#zajecia-input').val();
     $('.singIn-instructor').css('display','none');
     $("p[data-class='"+data_class+"']").css('display','block');
@@ -382,9 +369,25 @@ danceBtn.on('click',function(){
 
 
 
-
-
+    /*reset solo/pairs*/
+    if($(this).hasClass('pairs')){
+        $('.selected-course.solo').html('Solo');
+        $('.selected-course.pairs').html($(this).html());
+        $('.selected-course.fit').html('Dla zdrowia');
+    }
+    else if($(this).hasClass('solo')){
+        $('.selected-course.pairs').html('W Parach');
+        $('.selected-course.solo').html($(this).html());
+        $('.selected-course.fit').html('Dla zdrowia');
+    }
+    else if($(this).hasClass('fit')){
+        $('.selected-course.pairs').html('W Parach');
+        $('.selected-course.solo').html('Solo');
+        $('.selected-course.fit').html($(this).html());
+    }
 });
+
+
 
 /*toggle singin dive in dance post page*/
 $('#toggleSingIn').on('click',function(){
@@ -410,7 +413,7 @@ $('#toggleSingIn').on('click',function(){
     }
 
 });*/
-$('li#menu-item-286').on('click',function () {
+$('li#menu-item-436').on('click',function () {
 
     if($('.singIn-container').css('display') == 'none'){
         $('.singIn-container').fadeIn();
@@ -438,14 +441,3 @@ $('#closeSingIn').on('click',function () {
 //endregion
 
 
-
-
-
-//region activate pricelist accordion
-
-    var pricelist = $('#accordion');
-
-$( function() {
-    pricelist.accordion();
-} );
-//endregion

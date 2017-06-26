@@ -11,9 +11,9 @@ require_once 'classes/conn.php';
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Kochamy taniec. Naucz się z nami, jeśli nie umiesz tańczyć i zatańcz z nami Dzieci i dorośli, solo i w parach. Tango, zumba, salsa i wiele innych..."/>
+    <!--<meta name="description" content="Kochamy taniec. Naucz się z nami, jeśli nie umiesz tańczyć i zatańcz z nami Dzieci i dorośli, solo i w parach. Tango, zumba, salsa i wiele innych..."/>-->
     <link rel="canonical" href="http://majowa.eu/" />
-    <meta property="og:locale" content="pl_PL" />
+<!--    <meta property="og:locale" content="pl_PL" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Taniec Zabrze" />
     <meta property="og:description" content="Kochamy taniec. Naucz się z nami, jeśli nie umiesz tańczyć i zatańcz z nami Dzieci i dorośli, solo i w parach. Tango, zumba, salsa i wiele innych..." />
@@ -24,8 +24,8 @@ require_once 'classes/conn.php';
     <meta name="twitter:description" content="Kochamy taniec. Naucz się z nami, jeśli nie umiesz tańczyć i zatańcz z nami Dzieci i dorośli, solo i w parach. Tango, zumba, salsa i wiele innych..."/>
     <meta name="twitter:title" content="Taniec Zabrze"/>
     <meta name="twitter:domain" content="Majowa Szkoła Tańca"/>
-    <meta name="twitter:image" content="http://majowa.eu/wp-content/uploads/2015/09/MAJOWA_SZKOŁA_TAŃCA11.jpg"/>
-    <title>Taniec ZabrzeMajowa Szkoła Tańca | Majowa Szkoła Tańca</title>
+    <meta name="twitter:image" content="http://majowa.eu/wp-content/uploads/2015/09/MAJOWA_SZKOŁA_TAŃCA11.jpg"/>-->
+   <!-- <title>Taniec ZabrzeMajowa Szkoła Tańca | Majowa Szkoła Tańca</title>-->
     <link href="https://fonts.googleapis.com/css?family=Domine|Montserrat|Old+Standard+TT" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
     <?php wp_head();?>
@@ -108,6 +108,7 @@ require_once 'classes/conn.php';
                 <span></span>
             </span>
         </a>
+        <button id='toggleSingIn' class="toggleSingIn-mobile">ZAPISZ SIĘ</button>
     </nav>
     <div class="separator"></div>
 </aside>

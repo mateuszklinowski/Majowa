@@ -7,6 +7,7 @@
  */?>
 <div class="row">
     <div class="main-container">
+        <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
 
         <?php
         $arg=array(
@@ -23,7 +24,7 @@
     <?php while ( $events ->have_posts() ) : $events ->the_post();  ?>
 
         <?php
-        require (TEMPLATEPATH . '/templateParts/blogMain.php');
+        require (TEMPLATEPATH . '/templateParts/eventMain.php');
         ?>
         <!-- the rest of your theme's main loop -->
 

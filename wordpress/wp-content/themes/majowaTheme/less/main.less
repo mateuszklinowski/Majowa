@@ -146,6 +146,11 @@
     background: @majowaRed;
     color: white;
   }
+  &.toggleSingIn-mobile{
+    width: 100%;
+    font-size: 14px;
+    border: 3px solid @majowaRed;
+  }
 }
 
 //region facebook btn
@@ -473,88 +478,88 @@ body{
       margin: 0;
       padding: 0;
       overflow: hidden;
+      height: 522px;
 
-      .single-news{
+      .singleNews{
         position: absolute;
+        cursor:pointer;
         left: 0;
         top:0;
-        cursor: pointer;
-
-        width: 33.33%;
-
+        height: 522px;
         @media screen and (max-width: 1000px){
           width: 50%;
-          &:nth-of-type(3){
-            display: none;
-          }
+
         }
         @media screen and (max-width: 750px){
           width: 100%;
-          &:nth-of-type(3){
-            display: block;
-          }
         }
-        img, .post-thumbnail-box{
-          display: block;
-          margin: 0 auto;
-          width: 90%;
-          height: auto;
-        }
-
-        .news-category{
-          position: absolute;
-          top:0;
-          left: 5%;
-          background: rgba(255,255,255,0.6);
-          font-size: 19px;
-          font-weight: 700;
-          padding: 3px 6px 3px 6px;
-          border-bottom-right-radius: 10px;
-        }
-          .single-news-text{
-            background-color: white;
-            border-left: 1px solid @wiki;
-            border-right: 1px solid @wiki;
-            border-bottom: 1px solid @wiki;
-            width: 90%;
-            margin: 0 auto;
-            padding: 10px 5% 30px 5%;
-
-            .post-title{
-              .h3-style;
-            }
-            .post-preview{
-              margin-bottom: 30px;
-              color: @wiki;
-            }
-            .read-more-btn{
-
-              display: block;
-              width: 122px;
-              height: 53px;
-              border-radius: 2px;
-              border: 2px solid @strong-red-code;
-              .transition;
-              color: @strong-red-code;
-              line-height: 27px;
-              padding: 12px 15px;
-              font-weight: 700;
-              &:hover{
-                color: white;
-                background: @strong-red-code;
-                text-decoration: none;
-              }
-            }
-          }
-
         -webkit-transition: left 0.2s ease-out;
         -moz-transition: left 0.2s ease-out;
         -ms-transition: left 0.2s ease-out;
         -o-transition: left 0.2s ease-out;
         transition: left 0.2s ease-out;
       }
+      .singleNews--category{
+        position: absolute;
+        top:0;
+        left: 5%;
+        background: rgba(255,255,255,0.6);
+        font-size: 19px;
+        font-weight: 700;
+        padding: 3px 6px 3px 6px;
+        border-bottom-right-radius: 10px;
+      }
+      .singleNews--text{
+        position: relative;
+        background-color: white;
+        border-left: 1px solid @wiki;
+        border-right: 1px solid @wiki;
+        border-bottom: 1px solid @wiki;
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 5% 30px 5%;
+        height: 322px;
 
+        .post-title{
+          .h3-style;
+          max-height: 52px;
+          overflow: hidden;
+        }
+        .post-preview{
+          margin-bottom: 30px;
+          color: @wiki;
+          height: 120px;
+          overflow: hidden;
+        }
+        .read-more-btn{
+
+          display: block;
+          width: 122px;
+          height: 53px;
+          border-radius: 2px;
+          border: 2px solid @strong-red-code;
+          .transition;
+          color: @strong-red-code;
+          line-height: 27px;
+          padding: 12px 15px;
+          font-weight: 700;
+          &:hover{
+            color: white;
+            background: @strong-red-code;
+            text-decoration: none;
+          }
+        }
+      }
+      .singleNews--thumbnail{
+        width: 90%;
+        display: block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        margin: 0 auto;
+        height: 200px;
+      }
     }
+
     .blog-button{
       display: block;
       font-size: 19px;
@@ -1024,7 +1029,6 @@ body{
         line-height: 24px;
 
         margin: 0 auto 30px auto;
-        color: @wiki;
         border-left: 1px solid @wiki;
         border-right: 1px solid @wiki;
         border-bottom: 1px solid @wiki;
@@ -1038,7 +1042,7 @@ body{
     width: 30%;
     float: left;
     padding: 30px 10px 60px 30px;
-    border-left: 1px solid @strong-red-code;
+    border-left: 3px solid @strong-red-code;
     h3{
       text-align: left;
       font-weight: 700;
@@ -1131,12 +1135,12 @@ body{
       }
       p{
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
         @media screen and (max-width: 1200px){
-          font-size: 18px;
+          font-size: 14px;
         }
         @media screen and (max-width: 1000px){
-          font-size: 22px;
+          font-size: 20px;
         }
         color: black;
         margin: 15px 10px 15px 10px;
@@ -1307,6 +1311,10 @@ footer{
   z-index: 100;
   background: rgba(210,210,210,0.4);
 
+  @media screen and (max-width: 1000px){
+    position: absolute;
+  }
+
   .singIn-form-container{
     position: absolute;
     top:50%;
@@ -1318,26 +1326,66 @@ footer{
     transform: translate(-50%,-50%);
     background: white;
     padding: 25px;
-    width: 930px;
+    width: 995px;
+    border-radius: 5px;
+    @media screen and (max-width: 1000px){
+      width: 100%;
+      min-width: 320px;
+      top:100px;
+      left: 50%;
+      -webkit-transform: translate(-50%,0);
+      -moz-transform: translate(-50%,0);
+      -ms-transform: translate(-50%,0);
+      -o-transform: translate(-50%,0);
+      transform: translate(-50%,0);
+      border-top:2px solid black;
+      border-bottom:2px solid black;
+    }
 
     .singIn-column{
       margin: 0 5px;
       min-height: 310px;
-      width: 295px;
+      width: 300px;
       float: left;
       height: auto;
       &.columnWithBorders{
-        width: 250px;
+        width: 285px;
         border-right:3px solid @themeGery;
         border-left:3px solid @themeGery;
         h4{
-          margin-top: 35px;
+          margin-top: 25px;
           text-align: center;
+        }
+        .class-trainer-info{
+          min-height: 25px;
+        }
+        .class-hours-info{
+          min-height:50px
         }
         p{
           font-weight: 700;
           text-align: center;
         }
+        @media screen and (max-width: 1000px){
+          border: none;
+        }
+      }
+      &.instructions{
+        min-height: 40px;
+        width: 295px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+
+      }
+      &.selectDance{
+        width: 330px;
+      }
+      @media screen and (max-width: 1000px){
+        float: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
       }
     }
 
@@ -1352,12 +1400,14 @@ footer{
       cursor: pointer;
       position: relative;
       padding: 0;
-      width: 295px;
+      width: 317px;
       display: block;
       height: 80px;
-      margin: 20px auto;
+      margin: 10px auto 30px;
       background: transparent;
-      border: none;
+      border: 1px solid transparent;
+      border-radius: 40px;
+      padding-left: 10px;
       img{
         height: 100%;
         width: auto;
@@ -1377,10 +1427,15 @@ footer{
         position: absolute;
         display: none;
         top:100%;
-        right: 0;
-        width: 160px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 180px;
         height: auto;
-        background: rgb(210,210,210);
+        background: rgb(230,230,230);
         span{
           display: block;
           width: 100%;
@@ -1397,10 +1452,15 @@ footer{
         }
       }
       &:hover{
+        border: 1px solid @majowaRed;
         .singIn-selectBox{
           display: block;
         }
         outline: none !important;
+        background: rgb(255,255,255);
+      }
+      @media screen and (max-width: 1000px){
+        border: 1px solid @majowaRed;
       }
     }
 
@@ -1429,6 +1489,9 @@ footer{
           text-decoration: none;
         }
       }
+      @media screen and (max-width: 1000px){
+        display: none;
+      }
     }
 
     .singIn-form-inputs{
@@ -1449,7 +1512,7 @@ footer{
     }
 
     .submitBtn {
-      .transitionAll;
+      /*.transitionAll;
       display: block;
       outline: none;
       margin: 20px auto 5px auto;
@@ -1461,7 +1524,12 @@ footer{
       &:hover{
         color: white;
         background-color: rgba(210,32,39,0.95);
-      }
+      }*/
+      border: 1px solid transparent !important;
+      width: 160px !important;
+      line-height: 46px;
+      padding: 0 !important;
+      margin-top: 36px !important;
     }
 
     a.boxclose{
@@ -1507,6 +1575,28 @@ footer{
   }
 
 
+
+}
+
+.singIn-option{
+  display: none;
+}
+
+.kurs {
+  background: transparent;
+  border: 1px solid @majowaRed;
+  font-size: 16px;
+  height: 40px;
+  padding: 5px; /* If you add too much padding here, the options won't show in IE */
+  width: 240px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  padding-left: 10px;
+
+  outline: none !important;
 
 }
 
@@ -1830,4 +1920,106 @@ footer{
   left: 0;
 }
 //endregion
+
+//region single event container
+.event-container{
+  margin-top: 30px;
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+  .event-image-box{
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.64);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.64);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.64);
+    position: absolute;
+    left: 30px;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    object-fit: cover;
+    width: 40%;
+    display: block;
+    float: left;
+    height: auto;
+    min-height: 220px;
+    max-height: 100%;
+    @media screen and (max-width: 783px){
+      left: 0;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%);
+      position: relative;
+      display: none;
+      float: none;
+      width: 100%;
+    }
+  }
+  .event-info{
+    min-height: 215px;
+    margin: 20px 0;
+    width: 100%;
+    background: white;
+    padding-top: 10px;
+    padding-left: ~'calc(40% + 30px)';
+    padding-bottom: 15px;
+    @media screen and (max-width: 783px){
+      padding-left: 0;
+    }
+
+    .event-title{
+      font-size: 22px;
+      font-weight: 700;
+      display: block;
+      margin: 0 20px 15px 30px;
+      padding: 10px 10px 0 20px;
+      border-bottom: 3px solid @majowaRed;
+      @media screen and (max-width: 783px){
+        font-size: 18px;
+      }
+    }
+    .event-info-row{
+      font-size: 18px;
+      color: @wiki;
+      line-height: 30px;
+      display: block;
+      margin:0 0 0 30px;
+      padding: 0 10px 0 20px;
+      @media screen and (max-width: 783px){
+        font-size: 16px;
+      }
+    }
+    .event-info-button{
+      display: block;
+      margin: 15px auto 0 auto;
+      width: 125px;
+      height: 31px;
+      border-radius: 2px;
+      border: 3px solid @majowaRed;
+      .transition;
+      color: white;
+      background: @majowaRed;
+      line-height: 25px;
+      padding: 0 15px;
+      &:hover{
+        color: black;
+        background: white;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+}
+//endregion
+
+.gap40px{
+  display: block;
+  height: 40px;
+   }
 

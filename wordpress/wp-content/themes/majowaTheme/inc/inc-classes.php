@@ -11,7 +11,7 @@
                             'post_type' => 'post',
                             'category__in' => [11],
                             'meta_key'		=> 'kategoria',
-                            'meta_value'	=> 'solo'
+                            'meta_value'	=> 'solo',
                         );
                         $classes = new WP_Query($arg);
                         if ($classes ->have_posts()){
@@ -36,7 +36,7 @@
                             'post_type' => 'post',
                             'category__in' => [11],
                             'meta_key'		=> 'kategoria',
-                            'meta_value'	=> 'zdrowie'
+                            'meta_value'	=> 'zdrowie',
                         );
                         $classes = new WP_Query($arg);
                         if ($classes ->have_posts()){
@@ -61,7 +61,7 @@
                             'post_type' => 'post',
                             'category__in' => [11],
                             'meta_key'		=> 'kategoria',
-                            'meta_value'	=> 'pary'
+                            'meta_value'	=> 'pary',
                         );
                         $classes = new WP_Query($arg);
                         if ($classes ->have_posts()){

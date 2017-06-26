@@ -10,11 +10,13 @@ get_header();
         <div class="row">
             <div class="main-container">
                 <div class="single-post-container">
-                    <img class="single-blog-post-image" src=" <?php the_post_thumbnail_url(); ?> ">
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+                    
+                    <img class="single-blog-post-image " src=" <?php the_post_thumbnail_url() ?> ">
 
                     <div class="single-post-text">
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-                            the_content();
+
+                         <?php   the_content();
                         endwhile; else: ?>
                             <p>Sorry, no posts matched your criteria.</p>
                         <?php endif; ?>

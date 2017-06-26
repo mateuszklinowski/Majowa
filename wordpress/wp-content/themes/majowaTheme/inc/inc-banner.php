@@ -4,17 +4,14 @@
 
         <div class="banner-cut-div">
             <a href="<?php echo get_home_url()?>">
-                <img src="<?php echo get_template_directory_uri() ?>/img/logo-a4.png">
+                <img src="<?php echo get_template_directory_uri() ?>/img/majowaWhite.png">
             </a>
             <div class="todayClasses">
                 <?php
                 $db = new DB($name,$host,$user,$pass);
-                //                $db = new DB('bboosteurzmk','bboosteurzmk.mysql.db','bboosteurzmk','J8aK969E5w');
                 $classes = $db->getToDaysClasses();
                 $i = 0;
-
                 if(count($classes) > 0){
-
                     echo '<p>DZIŚ</p>';
                     while(isset($classes[$i])){
                         $start_hour = date('H:i', strtotime($classes[$i]['start_hour']));

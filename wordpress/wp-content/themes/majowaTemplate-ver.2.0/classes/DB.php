@@ -6,7 +6,7 @@
  * Date: 09.02.2017
  * Time: 11:48
  */
-class DB
+class DataBase
 {
 
     private $conn;
@@ -19,7 +19,7 @@ class DB
     /**
      * @return array
      */
-    public function getToDaysClasses()
+    public function getTodayClasses()
     {
         $classes = $this->conn->prepare("
 SELECT
@@ -51,11 +51,6 @@ ORDER BY class");
 
     public function getInstructor()
     {
-/*old sql*/
-        /*SELECT I.post_title as instructor, C.post_title as class FROM wp_posts I
-join wp_wcs3_schedule S on I.ID = S.instructor_id
-join (SELECT * FROM wp_posts WHERE post_type = 'wcs3_class') C on C.ID = S.class_id
-group by (I.post_title)*/
 
         $allCLasses = $this->conn->prepare("SELECT I.post_title as instructor, C.post_title as class FROM wp_posts I
  join wp_wcs3_schedule S on I.ID = S.instructor_id

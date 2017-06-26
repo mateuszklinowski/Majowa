@@ -5,6 +5,7 @@
 
             <?php
             $arg=array(
+                'posts_per_page' => 12,
                 'post_type' => 'post',
                 'category__in' => [10],
             );
