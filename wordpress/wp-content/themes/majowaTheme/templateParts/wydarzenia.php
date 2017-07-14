@@ -1,7 +1,7 @@
 <div class="latest-news-box">
 
     <a class="latest-post-image" href=" <?php echo get_permalink();?> ">
-        <img src=" <?php the_post_thumbnail_url(); ?> ">
+        <img src=" <?php the_post_thumbnail_url(); ?>" alt="<?php the_title()?>">
     </a>
     <div class="news-title_date">
         <div class="title">

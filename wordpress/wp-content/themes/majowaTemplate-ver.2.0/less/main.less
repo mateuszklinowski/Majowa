@@ -1,28 +1,280 @@
 @import "variables.less";
-body,html{
+
+@font-face {
+  font-family: EmilyLimePro;
+  src: url('../fonts/EmilyLimePro.woff');
+}
+
+body, html {
   overflow-x: hidden;
   max-width: 100%;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 25px;
 }
 
-.container--banner{
-  position: relative;
-  margin: 0;
-  padding: 0;
+strong {
+  color: black;
+  font-weight: bold;
 }
-.banner--image{
-  object-fit: cover;
-  -o-object-fit: cover;
-  display: block;
+
+.container {
   position: relative;
-  &:before{
-    display: block;
-    content: "";
+}
+
+.container--margins {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container--margins__top{
+  margin-top: 50px;
+}
+
+.container--padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.pseudo--slant__before {
+  position: relative;
+  padding-top: 100px;
+  &:before {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    z-index:2;
-
+    top: 0;
+    display: block;
+    z-index: 1;
+    content: "";
+    width: ~'calc(100% + 30px)';
+    margin: 0 -15px;
+    height: 100px;
+    background: linear-gradient(to left bottom, white, white 49%, transparent 50%, transparent);
   }
 }
+
+.pseudo--slant__after {
+  padding-bottom: 100px;
+  position: relative;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    z-index: 1;
+    content: "";
+    width: ~'calc(100% + 30px)';
+    margin: 0 -15px;
+    height: 100px;
+    background: linear-gradient(to right top, white, white 49%, transparent 50%, transparent);
+  }
+}
+
+.pseudo--slant {
+  .pseudo--slant__after;
+  .pseudo--slant__before;
+}
+
+.bg--pattern {
+  background: url('../img/bg2.png');
+}
+
+.title {
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+  line-height: 34px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.title--fancy {
+  font-family: "EmilyLimePro";
+  color: #d9a992;
+  font-weight: 100;
+  padding-bottom: 20px;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+//region newsletter
+.newsletter--form {
+  width: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+  height: 60px;
+}
+
+.newsletter--input {
+  width: 100%;
+  height: 60px;
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  background: #f3f3f3;
+  transition: all .4s;
+}
+
+.newsletter--button {
+  position: relative;
+  width: 100px;
+  margin-left: -100px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
+  &:hover {
+    i {
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+      -webkit-transform: rotate(30deg) scale(1.5);
+      -moz-transform: rotate(30deg) scale(1.5);
+      -ms-transform: rotate(30deg) scale(1.5);
+      -o-transform: rotate(30deg) scale(1.5);
+      transform: rotate(30deg) scale(1.5);
+    }
+  }
+}
+
+//endregion
+
+//region instructors
+.trainer-info {
+  /*border:1px solid white;*/
+  padding-top: 90px;
+  width: 240px;
+  height: 280px;
+  margin: 100px auto 0 auto;
+  h3 {
+    font-size: 20px;
+  }
+}
+.btn--link{
+  overflow: hidden;
+  display: block;
+  font-size: 16px;
+  padding: 3px 6px 3px 6px;
+  background-color: rgba(0, 0, 0, .2);
+  color: white;
+  line-height: 36px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    color: @majowaRed;
+    border-bottom: 1px solid @majowaRed;
+  }
+  width: 140px;
+  height: 38px;
+  border: none;
+  margin: 5px auto 5px auto;
+}
+.img--instructor {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid @pinkDark;
+  border-left: 2px solid @pinkDark;
+  border-right: 2px solid @pinkDark;
+}
+//endregion
+
+//region grafik
+.classes-breake{
+  height: 120px;
+  background: @grey;
+  position: relative;
+  width: 100%;
+  &:after{
+    content:'Miejsce na wasze pomysły \f118';
+    font-family: FontAwesome;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+
+#grafik {
+  margin: 0 auto 0 auto;
+  .wcs3-schedule-wrapper {
+    .wcs3-schedule-normal-layout {
+      tbody {
+        text-align: center;
+        tr {
+          border-top: 2px solid white;
+          height: 40px;
+          text-align: center;
+          th {
+            text-align: center;
+          }
+        }
+        tr:nth-child(odd) {
+          background-color: rgba(210, 32, 39, 0.2);
+          color: rgba(0, 0, 0, 0.4);
+        }
+        tr:nth-child(even) {
+          background-color: rgba(210, 32, 39, 0.1);
+          color: rgba(0, 0, 0, 0.4);
+        }
+        tr:first-of-type {
+          height: 50px;
+          background-color: transparent;
+          color: @strong-red-code;
+        }
+
+        tr:nth-of-type(8),tr:nth-of-type(9),tr:nth-of-type(10),tr:nth-of-type(11),tr:nth-of-type(12),tr:nth-of-type(13),tr:nth-of-type(14){
+          display: none;
+
+        }
+        td[class^="wcs3-day-col"], td[class*=' wcs3-day-col'] {
+        }
+        th[class^="wcs3-hour-row"], th[class*=' wcs3-hour-row'] {
+
+        }
+
+        .wcs3-ex1-cell-wrapper{
+          border-top: 2px solid white;
+          border-bottom: 2px solid white;
+          display: flex;
+          justify-content: center;
+          .wcs3-class-name{
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+  .wcs3-cell{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+  }
+
+  .wcs3-class-container{
+    background-color:@pinkDark;
+  }
+
+}
+//endregion

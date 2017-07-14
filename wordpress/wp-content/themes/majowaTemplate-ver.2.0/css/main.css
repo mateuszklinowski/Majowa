@@ -1,26 +1,267 @@
+@font-face {
+  font-family: EmilyLimePro;
+  src: url('../fonts/EmilyLimePro.woff');
+}
 body,
 html {
   overflow-x: hidden;
   max-width: 100%;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 25px;
 }
-.container--banner {
+strong {
+  color: black;
+  font-weight: bold;
+}
+.container {
   position: relative;
-  margin: 0;
-  padding: 0;
 }
-.banner--image {
-  object-fit: cover;
-  -o-object-fit: cover;
-  display: block;
+.container--margins {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.container--margins__top {
+  margin-top: 50px;
+}
+.container--padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.pseudo--slant__before {
   position: relative;
+  padding-top: 100px;
 }
-.banner--image:before {
-  display: block;
-  content: "";
+.pseudo--slant__before:before {
   position: absolute;
+  top: 0;
+  display: block;
+  z-index: 1;
+  content: "";
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+  height: 100px;
+  background: linear-gradient(to left bottom, white, white 49%, transparent 50%, transparent);
+}
+.pseudo--slant__after {
+  padding-bottom: 100px;
+  position: relative;
+}
+.pseudo--slant__after:after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+  content: "";
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+  height: 100px;
+  background: linear-gradient(to right top, white, white 49%, transparent 50%, transparent);
+}
+.pseudo--slant {
+  padding-bottom: 100px;
+  position: relative;
+  padding-top: 100px;
+}
+.pseudo--slant:after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+  content: "";
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+  height: 100px;
+  background: linear-gradient(to right top, white, white 49%, transparent 50%, transparent);
+}
+.pseudo--slant:before {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: 1;
+  content: "";
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+  height: 100px;
+  background: linear-gradient(to left bottom, white, white 49%, transparent 50%, transparent);
+}
+.bg--pattern {
+  background: url('../img/bg2.png');
+}
+.title {
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+  line-height: 34px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.title--fancy {
+  font-family: "EmilyLimePro";
+  color: #d9a992;
+  font-weight: 100;
+  padding-bottom: 20px;
+  font-size: 50px;
+  line-height: 50px;
+}
+.newsletter--form {
   width: 100%;
-  height: 100%;
-  background: white;
-  z-index: 2;
+  vertical-align: middle;
+  white-space: nowrap;
+  height: 60px;
+}
+.newsletter--input {
+  width: 100%;
+  height: 60px;
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  background: #f3f3f3;
+  transition: all .4s;
+}
+.newsletter--button {
+  position: relative;
+  width: 100px;
+  margin-left: -100px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
+}
+.newsletter--button:hover i {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-transform: rotate(30deg) scale(1.5);
+  -moz-transform: rotate(30deg) scale(1.5);
+  -ms-transform: rotate(30deg) scale(1.5);
+  -o-transform: rotate(30deg) scale(1.5);
+  transform: rotate(30deg) scale(1.5);
+}
+.trainer-info {
+  /*border:1px solid white;*/
+  padding-top: 90px;
+  width: 240px;
+  height: 280px;
+  margin: 100px auto 0 auto;
+}
+.trainer-info h3 {
+  font-size: 20px;
+}
+.btn--link {
+  overflow: hidden;
+  display: block;
+  font-size: 16px;
+  padding: 3px 6px 3px 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  line-height: 36px;
+  text-align: center;
+  width: 140px;
+  height: 38px;
+  border: none;
+  margin: 5px auto 5px auto;
+}
+.btn--link:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #D22027;
+  border-bottom: 1px solid #D22027;
+}
+.img--instructor {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid #D84A58;
+  border-left: 2px solid #D84A58;
+  border-right: 2px solid #D84A58;
+}
+.classes-breake {
+  height: 120px;
+  background: #F2F2F2;
+  position: relative;
+  width: 100%;
+}
+.classes-breake:after {
+  content: 'Miejsce na wasze pomysły \f118';
+  font-family: FontAwesome;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#grafik {
+  margin: 0 auto 0 auto;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody {
+  text-align: center;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr {
+  border-top: 2px solid white;
+  height: 40px;
+  text-align: center;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr th {
+  text-align: center;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-child(odd) {
+  background-color: rgba(210, 32, 39, 0.2);
+  color: rgba(0, 0, 0, 0.4);
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-child(even) {
+  background-color: rgba(210, 32, 39, 0.1);
+  color: rgba(0, 0, 0, 0.4);
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:first-of-type {
+  height: 50px;
+  background-color: transparent;
+  color: #D22027;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(8),
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(9),
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(10),
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(11),
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(12),
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(13),
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(14) {
+  display: none;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody .wcs3-ex1-cell-wrapper {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: center;
+}
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody .wcs3-ex1-cell-wrapper .wcs3-class-name {
+  align-self: center;
+}
+#grafik .wcs3-cell {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+#grafik .wcs3-class-container {
+  background-color: #D84A58;
 }

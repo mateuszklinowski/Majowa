@@ -31,6 +31,7 @@ function majowa_theme_setup(){
 
     add_theme_support('excerpt');
 
+    register_nav_menu('menu_sticky','Sticky menu');
     register_nav_menu('main_nav_menu','Primary header navigation menu');
 }
 
