@@ -1,6 +1,7 @@
 
-<div class="container-fluid">
-        <div class="news-box">
+<div class="container-fluid relative container--margins">
+    <h1 class="title text-center">Wydarzenia</h1>
+        <div class="news--box">
             <?php
             $arg=array(
                 'posts_per_page' => 9,
@@ -19,5 +20,5 @@
         </div>
         <button class="newsBox-slideBtn" id="news-slideRight"><i class="fa fa-angle-double-right fa-4x" aria-hidden="true"></i></button>
         <button class="newsBox-slideBtn" id="news-slideLeft"><i class="fa fa-angle-double-left fa-4x" aria-hidden="true"></i></button>
-        <a class="blog-button" href="<?php echo get_home_url()?>/wydarzenia/">WIĘCEJ</a>
+        <!--<a class="blog-button" href="<?php /*echo get_home_url()*/?>/wydarzenia/">WIĘCEJ</a>-->
 </div>

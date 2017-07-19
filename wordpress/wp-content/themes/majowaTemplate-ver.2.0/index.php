@@ -1,12 +1,11 @@
 
 <?php get_header(); ?>
-    <div class="page-container index-container">
 
-        <?php include (TEMPLATEPATH . '/inc/inc-pageTitle.php' ); ?>
+<?php require_once 'template_elements/banner.php'?>
 
-        <?php include (TEMPLATEPATH . '/inc/inc-blogMain.php' ); ?>
+<div class="col-md-9">
+    <h1 class="title text-center"><?php the_title()?></h1>
+</div>
+<?php require_once  'template_elements/aside.php'?>
 
-        <?php include (TEMPLATEPATH . '/inc/inc-aside.php') ?>
-
-    </div>
 <?php get_footer()?>

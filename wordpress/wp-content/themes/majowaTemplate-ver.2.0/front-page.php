@@ -6,6 +6,8 @@
 
 <?php require_once 'template_elements/front-page/news.php'?>
 
+<?php require_once 'template_elements/front-page/classes.php'?>
+
 <?php require_once 'template_elements/front-page/grafik.php' ?>
 
 <?php require_once 'template_elements/front-page/newsletter.php' ?>

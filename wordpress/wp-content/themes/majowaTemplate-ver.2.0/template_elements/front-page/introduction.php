@@ -7,6 +7,13 @@
  */
 ?>
 <div class="container  container--padding">
+    <!--<div class="col-lg-5 col-md-5 col-xs-12 right">
+
+    </div>
+    <div class="col-lg-7 col-md-7 col-xs-12 right">
+
+    </div>-->
+    <h1 class="text-center title--fancy">Taniec to nasza pasja!</h1>
         <p class="text-center">
             <em>
                 <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Proin sit amet cursus erat, ut placerat felis.

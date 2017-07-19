@@ -17,6 +17,9 @@ strong {
   color: black;
   font-weight: bold;
 }
+.relative {
+  position: relative;
+}
 .container {
   position: relative;
 }
@@ -47,7 +50,7 @@ strong {
   background: linear-gradient(to left bottom, white, white 49%, transparent 50%, transparent);
 }
 .pseudo--slant__after {
-  padding-bottom: 100px;
+  padding-bottom: 170px;
   position: relative;
 }
 .pseudo--slant__after:after {
@@ -58,11 +61,11 @@ strong {
   content: "";
   width: calc(100% + 30px);
   margin: 0 -15px;
-  height: 100px;
+  height: 170px;
   background: linear-gradient(to right top, white, white 49%, transparent 50%, transparent);
 }
 .pseudo--slant {
-  padding-bottom: 100px;
+  padding-bottom: 170px;
   position: relative;
   padding-top: 100px;
 }
@@ -74,7 +77,7 @@ strong {
   content: "";
   width: calc(100% + 30px);
   margin: 0 -15px;
-  height: 100px;
+  height: 170px;
   background: linear-gradient(to right top, white, white 49%, transparent 50%, transparent);
 }
 .pseudo--slant:before {
@@ -95,7 +98,7 @@ strong {
   font-weight: 700;
   font-size: 50px;
   color: black;
-  line-height: 34px;
+  line-height: 40px;
   margin-top: 0;
   margin-bottom: 50px;
   text-transform: uppercase;
@@ -107,6 +110,14 @@ strong {
   padding-bottom: 20px;
   font-size: 50px;
   line-height: 50px;
+}
+.title--big {
+  color: black;
+  font-weight: 700;
+  line-height: 80px;
+  font-size: 60px;
+  padding-top: 0;
+  margin-top: 10px;
 }
 .newsletter--form {
   width: 100%;
@@ -264,4 +275,216 @@ strong {
 }
 #grafik .wcs3-class-container {
   background-color: #D84A58;
+}
+.news--box {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 560px;
+}
+.singleNews {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  height: 550px;
+  -webkit-transition: left 0.2s ease-out;
+  -moz-transition: left 0.2s ease-out;
+  -ms-transition: left 0.2s ease-out;
+  -o-transition: left 0.2s ease-out;
+  transition: left 0.2s ease-out;
+}
+.news--img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.news--content {
+  height: 98%;
+  width: 90%;
+  margin: 3px auto;
+  box-shadow: -1px 3px 7px 0px rgba(0, 0, 0, 0.35);
+}
+.news--content:hover {
+  box-shadow: -7px 13px 40px 0px rgba(0, 0, 0, 0.25);
+}
+.news--text {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  min-height: 40%;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+}
+.newsBox-slideBtn {
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 100px;
+  zoom: 1.3;
+  border: none;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  outline: none !important;
+  color: black;
+}
+.newsBox-slideBtn#news-slideRight {
+  right: -5px;
+}
+.newsBox-slideBtn#news-slideLeft {
+  left: -5px;
+}
+.news--readMore {
+  display: block;
+  text-align: right;
+  font-weight: 600;
+  cursor: pointer;
+  color: #D84A58;
+  text-decoration: none;
+}
+.news--readMore:hover {
+  color: #d9a992;
+  text-decoration: none;
+}
+.classes-container .single-class {
+  cursor: pointer;
+  position: relative;
+  padding: 0 1px 1px 0;
+  float: left;
+  width: 33.333%;
+}
+@media screen and (max-width: 1000px) {
+  .classes-container .single-class {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .classes-container .single-class {
+    width: 100%;
+  }
+}
+.classes-container .single-class img {
+  width: 100%;
+  height: auto;
+}
+.classes-container .single-class .class-hover {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s ease;
+  -moz-transition: visibility 0s, opacity 0.5s ease;
+  -ms-transition: visibility 0s, opacity 0.5s ease;
+  -o-transition: visibility 0s, opacity 0.5s ease;
+  transition: visibility 0s, opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #33333a;
+  z-index: 2;
+  padding: 12% 5% 10px 5%;
+  text-align: center;
+}
+.classes-container .single-class .class-hover .classes-links-container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.classes-container .single-class .class-hover .single-class-link {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  line-height: 75px;
+  border-bottom: 1px solid transparent;
+}
+.classes-container .single-class .class-hover .single-class-link:hover {
+  border-bottom: 1px solid white;
+  text-decoration: none;
+}
+.classes-container .single-class:hover .class-hover {
+  visibility: visible;
+  opacity: 1;
+}
+.classes-container .single-class:hover .class-category {
+  display: none;
+}
+.classes-container .single-class .class-category {
+  color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 65px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 65px;
+  width: 290px;
+  text-align: center;
+}
+.latest-news-box {
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.latest-news-box .latest-post-image {
+  display: block;
+  width: 50px;
+  float: left;
+}
+.latest-news-box .latest-post-image img {
+  display: block;
+  width: 50px;
+  height: 45px;
+  object-fit: cover;
+  -o-object-fit: cover;
+  margin: 5px;
+  border-radius: 2px;
+}
+.latest-news-box .news-title_date {
+  margin: 0 0 0 65px;
+}
+.latest-news-box .news-title_date.teacher-data {
+  margin-left: 0;
+}
+.latest-news-box .news-title_date .meta {
+  font-size: 12px;
+}
+.latest-news-box .news-title_date .teacher-class-title {
+  font-size: 22px;
+  color: #33333a;
+}
+.latest-news-box:hover {
+  background: #D84A58;
+}
+.aside--news__title {
+  display: block;
+  color: black;
+}
+.aside--news__title:hover {
+  text-decoration: none;
+  color: black;
 }
