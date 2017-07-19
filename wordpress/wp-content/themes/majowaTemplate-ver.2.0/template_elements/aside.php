@@ -30,11 +30,11 @@
         ?>
     </div>
     <h2>Znajdź nas na:</h2>
-    <div class="aside-social-container">
-        <a class="aside-facebook-btn" href="https://www.facebook.com/Taniec.Zabrze/?fref=ts">
+
+        <a class="aside--facebook" href="https://www.facebook.com/Taniec.Zabrze/?fref=ts">
             <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
         </a>
-    </div>
+
     <h2>Wpisy:</h2>
     <div>
         <?php
