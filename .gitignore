@@ -6,6 +6,7 @@ wordpress/wp-content/blogs.dir/
 wordpress/wp-content/cache/
 wordpress/wp-content/upgrade/
 wordpress/wp-content/uploads/
+wordpress/wp-content/uploads/*
 wordpress/wp-content/wp-cache-config.php
 wordpress/wp-content/plugins/
 wordpress/wp-content/index.php
@@ -54,3 +55,4 @@ wordpress/wp-content/themes/majowaTheme/classes/conn.php
 /wordpress/wp-content/themes/majowaTemplate-ver.2.0/img/
 /majowaProd-18.06/
 /wordpress.rar
+/wordpress/wp-content/uploads/
