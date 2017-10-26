@@ -1,3 +1,13 @@
+.boxShadow_1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.boxShadow_1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.boxShadow_2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
 @font-face {
   font-family: EmilyLimePro;
   src: url('../fonts/EmilyLimePro.woff');
@@ -102,6 +112,11 @@ strong {
   margin-top: 0;
   margin-bottom: 50px;
   text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 36px;
+  }
 }
 .title--fancy {
   font-family: "EmilyLimePro";
@@ -516,4 +531,142 @@ strong {
 .aside--news__title:hover {
   text-decoration: none;
   color: black;
+}
+.pricelist-container table th {
+  text-align: center;
+}
+.pricelist-container table td {
+  border: 1px solid black;
+  min-width: 40px;
+  text-align: center;
+}
+.pricelist-container table .tleft {
+  text-align: left;
+}
+.pricelist-container table .tbold {
+  font-weight: 700;
+}
+.pricelist-container #accordion .col-sm-2,
+.pricelist-container #accordion .col-sm-6 {
+  padding: 0;
+}
+.pricelist-container #accordion h3 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  padding: 0  0 0 15px;
+  outline: none;
+}
+.pricelist-container #accordion h3.ui-state-active {
+  background: #D22027;
+  border: 1px solid black;
+}
+.pricelist-container #accordion .column-title {
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  height: 50px;
+  display: block;
+}
+.pricelist-container #accordion .column-content {
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  line-height: 40px;
+}
+.contact-info-container {
+  padding: 30px 0 30px 0;
+}
+.contact-info-container img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.contact-info-container .contact-ways {
+  padding: 5% 0 5% 5%;
+  font-size: 16px;
+}
+.contact-info-container .contact-ways h4 i {
+  color: #D22027;
+  min-width: 36px;
+  margin-right: 5px;
+}
+.contact-info-container .contact-adress {
+  padding: calc(5% + 10px);
+  text-align: right;
+}
+@media screen and (max-width: 660px) {
+  .contact-info-container .contact-adress {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .contact-info-container {
+    width: 100%;
+  }
+}
+.maps-container {
+  height: 600px;
+  padding-bottom: 50px;
+}
+.event-box {
+  margin: 50px auto;
+  width: 100%;
+  min-height: 200px;
+  background: #d9a992;
+  padding: 0 15px;
+}
+.event-img {
+  display: block;
+  margin: -10px 20px 20px 0;
+  float: left;
+  width: 50%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  max-width: 350px;
+}
+@media (max-width: 600px) {
+  .event-img {
+    float: none;
+    margin: -10px auto 20px auto;
+    width: 90%;
+  }
+}
+.event-img_promo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.event-info {
+  padding: 15px 25px 40px 25px;
+}
+.event-note {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  text-indent: 10px;
+  font-weight: 900;
+}
+.event-excert {
+  font-size: 14px;
+  text-align: justify;
+  text-indent: 10px;
+  line-height: 22px;
+  font-weight: 600;
+  margin: 25px 15px;
+}
+.event-title {
+  margin-top: 5px;
+  font-weight: 600;
+  color: black;
+}
+.event-btn {
+  display: block;
+  float: right;
+}
+/*region for single event page*/
+.event-content {
+  font-size: 16px;
+  color: black;
+  line-height: 25.6px;
 }

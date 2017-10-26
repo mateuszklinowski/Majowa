@@ -76,7 +76,6 @@
         else{
             current_slide = new Single_slide(slides[i],i,slide_width);
         }
-        console.log(slide_width);
         slides_array.push(current_slide);
     }
     slides_array.forEach(function (slide) {
@@ -85,14 +84,14 @@
 
     move_right_btn.on('click',function () {
         slides_array.forEach(function (slide) {
-            slide.move_right();
+            slide.move_left();
             slide.move();
 
         })
     });
     move_left_btn.on('click',function () {
         slides_array.forEach(function (slide) {
-            slide.move_left();
+            slide.move_right();
             slide.move();
         })
     });

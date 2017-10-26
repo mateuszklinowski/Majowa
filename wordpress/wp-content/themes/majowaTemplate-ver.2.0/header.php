@@ -18,7 +18,6 @@ require_once 'classes/DB.php';
 </head>
 <body  <?php body_class(); ?>>
 
-
 <?php require (TEMPLATEPATH . '/template_elements/main_menu.php');?>
 
 

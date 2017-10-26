@@ -6,7 +6,7 @@
  * Date: 09.02.2017
  * Time: 11:48
  */
-class DB
+class DBold
 {
 
     private $conn;

@@ -44,7 +44,7 @@ if($charakter || $kogo || $ubior || $kiedy){
         print_r("<p>".$custom['kiedy_zaczac'][0]."</p>");
     }
 
-    echo "<button id='toggleSingIn'>ZAPISZ SIĘ</button>";
+    echo "<button class='toggleSingIn' id='toggleSingIn'>ZAPISZ SIĘ</button>";
     echo "</div>";
 }
 

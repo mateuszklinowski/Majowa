@@ -390,7 +390,7 @@ danceBtn.on('click',function(){
 
 
 /*toggle singin dive in dance post page*/
-$('#toggleSingIn').on('click',function(){
+$('.toggleSingIn').on('click',function(){
     /*$('.aside-sing-in').toggle('slow');*/
 
     if($('.singIn-container').css('display') == 'none'){

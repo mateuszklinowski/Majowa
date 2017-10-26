@@ -10,7 +10,7 @@
         <p class="post-preview">
             <?php echo excerpt(20) ?>
         </p>
-        <a class="news--readMore" href="<?php /*echo get_permalink();*/?>">
+        <a class="news--readMore" href="<?php echo get_permalink();?>">
             Czytaj dalej...
         </a>
     </article>

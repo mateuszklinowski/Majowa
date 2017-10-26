@@ -92,6 +92,9 @@ strong {
   margin-top: 0;
   margin-bottom: 50px;
   text-transform: uppercase;
+  @media (max-width: 600px){
+    font-size: 36px;
+  }
 }
 
 .title--fancy {
@@ -111,6 +114,7 @@ strong {
   padding-top: 0;
   margin-top: 10px;
 }
+
 
 //region banner
 .banner--image__small{
@@ -563,4 +567,162 @@ strong {
     color: black;
   }
 }
+//endregion
+
+//region pricelist
+.pricelist-container{
+
+  table{
+    th{
+      text-align: center;
+    }
+    td{
+      border: 1px solid black;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .tleft{
+      text-align: left;
+    }
+    .tbold{
+      font-weight: 700;
+    }
+  }
+  #accordion{
+    .col-sm-2, .col-sm-6{
+      padding: 0;
+    }
+    h3{
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      padding: 0  0 0 15px;
+      outline:  none;
+      &.ui-state-active{
+        background: @majowaRed;
+        border:1px solid black;
+      }
+    }
+    .column-title{
+      line-height: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      height: 50px;
+      display: block;
+    }
+    .column-content{
+      border-bottom: 1px solid black;
+      font-size: 16px;
+      line-height: 40px;
+
+    }
+  }
+}
+//endregion
+
+//region kontakt
+.contact-info-container{
+  padding: 30px 0 30px 0;
+
+
+  img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contact-ways{
+    padding: 5% 0 5% 5%;
+    font-size: 16px;
+    h4{
+      i{
+        color: @strong-red-code;
+        min-width: 36px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .contact-adress{
+    padding: ~'calc(5% + 10px)';
+    text-align: right;
+    @media screen and (max-width: 660px){
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 970px){
+    width: 100%;
+  }
+}
+.maps-container{
+  height: 600px;
+  padding-bottom: 50px;
+}
+//endregion
+
+//region event
+
+.event-box{
+  margin: 50px auto;
+  width: 100%;
+  min-height: 200px;
+  background: @pinkLight;
+  padding: 0 15px;
+}
+.event-img{
+  display: block;
+  margin: -10px 20px 20px 0;
+  float: left;
+  //height: 220px;
+  width:50%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  max-width: 350px;
+  @media(max-width: 600px){
+    float: none;
+    margin: -10px auto 20px auto;
+    width: 90%;
+  }
+}
+.event-img_promo{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.event-info{
+  padding: 15px 25px 40px 25px;
+}
+.event-note{
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  text-indent: 10px;
+  font-weight: 900;
+}
+.event-excert{
+  font-size: 14px;
+  text-align: justify;
+  text-indent: 10px;
+  line-height: 22px;
+  font-weight: 600;
+  margin: 25px 15px;
+}
+.event-title{
+  margin-top: 5px;
+  font-weight: 600;
+  color: @darkFont;
+}
+.event-btn{
+  display: block;
+  float: right;
+
+}
+/*region for single event page*/
+ .event-content{
+   font-size: 16px;
+   color: @darkFont;
+   line-height: 25.6px;
+ }
 //endregion
