@@ -148,6 +148,10 @@
   color: black;
   font-size: 1.3em;
 }
+#singInModal textarea {
+  height: 140px;
+  resize: none;
+}
 #singInModal .modal-header {
   border-bottom: 0;
 }

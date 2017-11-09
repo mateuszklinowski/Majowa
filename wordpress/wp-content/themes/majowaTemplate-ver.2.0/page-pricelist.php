@@ -242,56 +242,6 @@ get_header();
                                 <div class="column-content">-</div>
                             </div>
                         </div>
-                        <!--  <h3>Pilates flow</h3>
-                          <div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">Rodzaj zajęć</div>
-                                  <div class="column-content">Pilates flow</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">Czas trwania</div>
-                                  <div class="column-content">60min</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">4 zajęcia</div>
-                                  <div class="column-content">48zł</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">8 zajęc</div>
-                                  <div class="column-content">90zł</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">12 zajęc</div>
-                                  <div class="column-content">135zł</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">Pojedyńcze wejście</div>
-                                  <div class="column-content">15zł</div>
-                              </div>
-                          </div>
-                          <h3>Pilates 50+ (2 razy / tydzień)</h3>
-                          <div>
-                              <div class="col-sm-4">
-                                  <div class="column-title">Rodzaj zajęć</div>
-                                  <div class="column-content">Pilates</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">Czas trwania</div>
-                                  <div class="column-content">60min</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">8 zajęc</div>
-                                  <div class="column-content">64zł</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">16 zajęc</div>
-                                  <div class="column-content">112zł</div>
-                              </div>
-                              <div class="col-sm-2">
-                                  <div class="column-title">Pojedyńcze wejście</div>
-                                  <div class="column-content">10zł</div>
-                              </div>
-                          </div>-->
                     </div>
 
                     <div class="clearfix"></div>
