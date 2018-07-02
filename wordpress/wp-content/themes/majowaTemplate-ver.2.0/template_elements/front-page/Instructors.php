@@ -8,6 +8,7 @@
 ?>
 
 <div class="container-fluid container--margins__top  pseudo--slant__before bg--pattern">
+    <h1 class="title text-center">INSTRUKTORZY</h1>
     <div class="row">
                 <?php
                 $arg=array(

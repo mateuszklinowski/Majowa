@@ -105,10 +105,11 @@ strong {
   background: url('../img/bg2.png');
 }
 .title {
+  padding: 5px 0;
   font-weight: 700;
   font-size: 50px;
   color: black;
-  line-height: 40px;
+  line-height: 50px;
   margin-top: 0;
   margin-bottom: 50px;
   text-transform: uppercase;
@@ -270,9 +271,7 @@ strong {
 #grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(9),
 #grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(10),
 #grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(11),
-#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(12),
-#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(13),
-#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(14) {
+#grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody tr:nth-of-type(12) {
   display: none;
 }
 #grafik .wcs3-schedule-wrapper .wcs3-schedule-normal-layout tbody .wcs3-ex1-cell-wrapper {
@@ -293,46 +292,82 @@ strong {
 }
 .news--box {
   position: relative;
-  margin: 0;
+  margin: 0 20px 0 20px;
   padding: 0;
   overflow: hidden;
-  height: 560px;
+  height: 620px;
+}
+@media screen and (max-width: 600px) {
+  .news--box {
+    margin: 0;
+    height: 500px;
+  }
 }
 .singleNews {
   position: absolute;
   cursor: pointer;
   left: 0;
   top: 0;
-  height: 550px;
   -webkit-transition: left 0.2s ease-out;
   -moz-transition: left 0.2s ease-out;
   -ms-transition: left 0.2s ease-out;
   -o-transition: left 0.2s ease-out;
   transition: left 0.2s ease-out;
 }
+.image--wrapper {
+  width: 100%;
+  padding-bottom: 66.666666%;
+  /*  ratio */
+  position: relative;
+}
 .news--img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   -o-object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.news--link {
+  color: black;
+}
+.news--link:hover {
+  text-decoration: none;
+  color: black;
 }
 .news--content {
   height: 98%;
   width: 90%;
   margin: 3px auto;
   box-shadow: -1px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
 }
 .news--content:hover {
   box-shadow: -7px 13px 40px 0px rgba(0, 0, 0, 0.25);
 }
+.news--content:hover img {
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  transform: scale(1.03);
+  transition: all 0.2s ease-in;
+}
 .news--text {
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  right: 5%;
-  min-height: 40%;
+  position: relative;
   background: rgba(255, 255, 255, 0.7);
   padding: 5px 10px;
+  color: black;
+  display: block;
+  height: 200px;
+  overflow: hidden;
+}
+.news--text p {
+  text-overflow: ellipsis;
 }
 .newsBox-slideBtn {
   background: transparent;
@@ -357,6 +392,9 @@ strong {
   left: -5px;
 }
 .news--readMore {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
   display: block;
   text-align: right;
   font-weight: 600;
@@ -550,6 +588,20 @@ strong {
 .pricelist-container #accordion .col-sm-6 {
   padding: 0;
 }
+@media screen and (max-width: 768px) {
+  .pricelist-container #accordion .row .col-sm-4 {
+    padding: 0;
+  }
+  .pricelist-container #accordion div .row .col-sm-4:first-child {
+    font-weight: 600;
+  }
+  .pricelist-container #accordion div .row .col-sm-3:first-child {
+    font-weight: 600;
+  }
+  .pricelist-container #accordion .column-content {
+    border-bottom: 1px solid black;
+  }
+}
 .pricelist-container #accordion h3 {
   height: 50px;
   line-height: 50px;
@@ -569,9 +621,20 @@ strong {
   display: block;
 }
 .pricelist-container #accordion .column-content {
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black;*/
   font-size: 16px;
   line-height: 40px;
+}
+.pricelist-container #accordion div .row {
+  border-bottom: 1px solid black;
+}
+@media screen and (max-width: 800px) {
+  .pricelist-container .pricelist_wrapper {
+    overflow-x: scroll;
+  }
+  .pricelist-container .pricelist_wrapper #accordion {
+    min-width: 700px;
+  }
 }
 .contact-info-container {
   padding: 30px 0 30px 0;
@@ -585,7 +648,10 @@ strong {
   padding: 5% 0 5% 5%;
   font-size: 16px;
 }
-.contact-info-container .contact-ways h4 i {
+.contact-info-container .contact-ways a {
+  color: black;
+}
+.contact-info-container .contact-ways a h4 i {
   color: #D22027;
   min-width: 36px;
   margin-right: 5px;
@@ -739,4 +805,18 @@ strong {
 .container-comment span {
   line-height: 35px;
   margin: 0 35px;
+}
+.footer {
+  background: #969696;
+  margin-top: 75px;
+}
+.nav-padding {
+  display: block;
+  float: right;
+}
+.nav-padding a {
+  color: white !important;
+}
+.nav-padding.alignleft {
+  float: left;
 }

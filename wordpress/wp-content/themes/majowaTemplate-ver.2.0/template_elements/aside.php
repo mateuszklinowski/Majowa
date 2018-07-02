@@ -47,7 +47,7 @@
         if ($last4POSTS->have_posts()) {
             while ($last4POSTS->have_posts()) {
                 $last4POSTS->the_post();
-                require (TEMPLATEPATH . '/single_elements/aside/wydarzenia.php');
+                require (TEMPLATEPATH . '/single_elements/aside/wpisy.php');
             }
         }
         ?>

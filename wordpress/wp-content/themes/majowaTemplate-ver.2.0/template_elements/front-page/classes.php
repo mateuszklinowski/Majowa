@@ -1,4 +1,5 @@
 <div class="container-fluid container--margins container--padding">
+    <h1 class="title text-center">ZAJĘCIA</h1>
     <div class="classes-container" id="zajecia">
         <div class="classes-box">
             <div class="single-class solo-class">

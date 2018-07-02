@@ -14,6 +14,7 @@ $(document).ready(function () {
 
     $('.singInModal').on('click', function () {
         $('#singInModal').modal('toggle');
+        console.log('modal');
     })
 
 
@@ -43,27 +44,45 @@ $(document).ready(function () {
     function hideMobileMenu() {
 
         mobileMenu.animate({
-            left: '-200px'
+            left: '-300px'
         }, 300, 'easeInQuart', function () {
             mobileMenu.fadeOut(300)
         })
 
     }
 
-    /*todayClasses slide animation*/
+        var header = $('.nav--container__fluid');
+
+        function testScroll(){
+            if(window.pageYOffset>100){
+                header.css('background','rgba(0,0,0,0.6)');
+                header.css('top','-40px');
+                header.css('position','fixed');
+                $('.nav--logo').css('visibility','hidden');
+            }
+            else if(window.pageYOffset<100){
+                header.css('background','transparent');
+                header.css('top','0');
+                $('.nav--logo').css('visibility','visible');
+            }
+        }
+        if(window.pageYOffset>100){
+            testScroll();
+        }
+        window.onscroll=testScroll;
+
+
+    /*todayClasses slide animation*//*
     (function slideTodayClasses(){
 
         var todayClassesRows = $(".todayClasses-row");
-
-        console.log(todayClassesRows)
         for(var i = 0; i < todayClassesRows.length; i++){
 
-            console.log(todayClassesRows[i]);
             todayClassesRows[i].animate({
                height: "100px"
-            },0.4, 'easeOutCubic')
+            },0.9, 'easeOutCubic')
 
         }
-        console.log('sda')
-    })();
+    })();*/
+
 });

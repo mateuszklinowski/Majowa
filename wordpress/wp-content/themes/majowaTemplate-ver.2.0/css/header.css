@@ -10,7 +10,7 @@
 }
 .container--banner {
   position: relative;
-  margin: 0;
+  margin: 1;
   padding: 0;
 }
 .banner--image {
@@ -20,12 +20,17 @@
   position: relative;
 }
 .nav--container__fluid {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   height: 120px;
-  z-index: 2;
+  z-index: 20;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .nav--container {
   height: 100%;
@@ -42,7 +47,7 @@
   margin-top: 40px;
   font-size: 1.3em;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .nav--main {
     display: none;
     position: fixed;
@@ -50,7 +55,7 @@
     z-index: 10;
     background: rgba(210, 32, 39, 0.8);
     top: 0;
-    left: -200px;
+    left: -300px;
     right: 0;
     bottom: 0;
     margin: 0;
@@ -78,7 +83,7 @@
 .menu-item a:hover {
   text-decoration: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .menu-item {
     display: block;
     height: 10vh;
@@ -129,7 +134,7 @@
 .sub-menu .menu-item a:hover {
   text-decoration: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .sub-menu .menu-item {
     padding: 0 20px;
     font-size: 20px;
@@ -190,7 +195,7 @@
   color: white;
   z-index: 20;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .box-shadow-menu {
     display: block;
   }

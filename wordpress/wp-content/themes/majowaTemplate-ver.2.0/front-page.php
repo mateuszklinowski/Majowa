@@ -2,7 +2,7 @@
 
 <?php require_once 'template_elements/front-page/banner.php' ?>
 
-<?php require_once 'template_elements/front-page/introduction.php' ?>
+<?php /*require_once 'template_elements/front-page/introduction.php' */?>
 
 <?php require_once 'template_elements/front-page/news.php'?>
 

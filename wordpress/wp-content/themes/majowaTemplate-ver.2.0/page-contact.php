@@ -22,9 +22,14 @@ get_header();
 
                     <div class="col-md-offset-1 col-md-5">
                         <div class="contact-ways">
-                            <h4><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> taniec.zabrze@gmail.com</h4>
-                            <h4><i class="fa fa-phone fa-2x" aria-hidden="true"></i> (+48) 535 299 316</h4>
-                            <h4><i class="fa fa-facebook fa-2x" aria-hidden="true"></i>  /majowaszkola</h4>
+                            <a href="mailto:<?php echo get_field('email_kontaktowy') ?>">
+                                <h4><i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                                    <?php echo get_field('email_kontaktowy') ?>
+                                </h4></a>
+                            <a href="tel:+48<?php echo get_field('telefon_kontaktowy') ?>"><h4><i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                                    (+48)   <?php echo get_field('telefon_kontaktowy') ?>
+                                </h4></a>
+                            <a href="https://www.facebook.com/Taniec.Zabrze/"><h4><i class="fa fa-facebook fa-2x" aria-hidden="true"></i>  /Taniec.Zabrze</h4></a>
                         </div>
                         <div class="contact-adress">
                             Majowa Szkoła Tańca

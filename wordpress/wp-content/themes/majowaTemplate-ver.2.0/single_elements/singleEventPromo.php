@@ -13,13 +13,26 @@ if($alt === ""){
 $custom = get_post_custom();
 
 
-$day = substr($custom['dzien_miesiac'][0],0,2);
-$month = substr($custom['dzien_miesiac'][0],2,2);
+if(array_key_exists('dzien_miesiac',$custom)){
+    $day = substr($custom['dzien_miesiac'][0],0,2);
+    $month = substr($custom['dzien_miesiac'][0],2,2);
+    $year = substr($custom['dzien_miesiac'][0],4,4);
+    if($year == '' && $month != ''){
+        $year = date("Y");
+    }
+} else {
+    $day = '';
+    $month = '';
+    $year = '';
+}
+$godzina = '';
+$lokalizacja = '';
 
-
-$year = '';
-if($month){
-    $year = '.'.date("Y");
+if(array_key_exists('godzina',$custom)){
+    $godzina = $custom['godzina'][0];
+}
+if(array_key_exists('lokacja',$custom)){
+    $lokalizacja = $custom['lokacja'][0];
 }
 ?>
 
@@ -28,9 +41,9 @@ if($month){
         <div class="event-box boxShadow_1">
             <img class="event-img event-img_promo boxShadow_1"  src="<?php the_post_thumbnail_url()?>" alt="<?php echo $alt ?>">
             <div class="event-info">
-                <span class="event-note"><?php echo $custom['godzina'][0]?> &nbsp </span>
-                <span class="event-note"><?php echo $custom['lokacja'][0]?> &nbsp </span>
-                <span class="event-note"><?php echo $day; ?>.<?php echo $month; ?><?php echo $year; ?> &nbsp </span>
+                <span class="event-note"><?php echo $godzina?> &nbsp </span>
+                <span class="event-note"><?php echo $lokalizacja?> &nbsp </span>
+                <span class="event-note"><?php echo $day; ?>.<?php echo $month; ?>.<?php echo $year; ?> &nbsp </span>
                 <h2 class="event-title"><?php the_title(); ?></h2>
                 <p class="event-excert"><?php  echo excerpt(40) ?></p>
                 <a class="btn btn-primary btn-danger event-btn" href="<?php echo get_permalink();?>">

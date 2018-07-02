@@ -85,10 +85,11 @@ strong {
 }
 
 .title {
+  padding: 5px 0;
   font-weight: 700;
   font-size: 50px;
   color: black;
-  line-height: 40px;
+  line-height: 50px;
   margin-top: 0;
   margin-bottom: 50px;
   text-transform: uppercase;
@@ -268,7 +269,7 @@ strong {
           color: @strong-red-code;
         }
 
-        tr:nth-of-type(8),tr:nth-of-type(9),tr:nth-of-type(10),tr:nth-of-type(11),tr:nth-of-type(12),tr:nth-of-type(13),tr:nth-of-type(14){
+        tr:nth-of-type(8),tr:nth-of-type(9),tr:nth-of-type(10),tr:nth-of-type(11),tr:nth-of-type(12){
           display: none;
 
         }
@@ -305,46 +306,77 @@ strong {
 //region frontPage news
 .news--box{
   position: relative;
-  margin: 0;
+  margin: 0 20px 0 20px;
+  @media screen and (max-width: 600px){
+    margin: 0;
+    height: 500px;
+  }
   padding: 0;
   overflow: hidden;
-  height: 560px;
+  height: 620px;
 }
 .singleNews{
   position: absolute;
   cursor:pointer;
   left: 0;
   top:0;
-  height: 550px;
   -webkit-transition: left 0.2s ease-out;
   -moz-transition: left 0.2s ease-out;
   -ms-transition: left 0.2s ease-out;
   -o-transition: left 0.2s ease-out;
   transition: left 0.2s ease-out;
 }
+.image--wrapper{
+  width: 100%;
+  padding-bottom: 66.666666%; /*  ratio */
+  position: relative;
+}
 .news--img{
   height: 100%;
   width: 100%;
   object-fit: cover;
   -o-object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+.news--link{
+  color: black;
+  &:hover{
+    text-decoration: none;
+    color: black;
+  }
 }
 .news--content{
+
   height: 98%;
   width: 90%;
   margin: 3px auto;
   box-shadow: -1px 3px 7px 0px rgba(0,0,0,0.35);
+  overflow: hidden;
   &:hover{
     box-shadow: -7px 13px 40px 0px rgba(0,0,0,0.25);
+    img{
+      -webkit-transform: scale(1.03);
+      -moz-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+      -o-transform: scale(1.03);
+      transform: scale(1.03);
+      transition: all 0.2s ease-in;
+    }
   }
 }
 .news--text{
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  right: 5%;
-  min-height: 40%;
+  position: relative;
   background: rgba(255,255,255,0.7);
   padding: 5px 10px;
+  color: black;
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  p{
+    text-overflow: ellipsis;
+  }
 }
 .newsBox-slideBtn{
   background: transparent;
@@ -370,6 +402,9 @@ strong {
   }
 }
 .news--readMore{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
   display: block;
   text-align: right;
   font-weight: 600;
@@ -592,6 +627,27 @@ strong {
   #accordion{
     .col-sm-2, .col-sm-6{
       padding: 0;
+
+    }
+    @media screen and (max-width: 768px){
+      .row{
+        .col-sm-4{
+          padding:0;
+        }
+      }
+      div{
+        .row{
+            .col-sm-4:first-child{
+              font-weight: 600;
+            }
+            .col-sm-3:first-child{
+            font-weight: 600;
+            }
+        }
+      }
+      .column-content{
+        border-bottom: 1px solid black;
+      }
     }
     h3{
       height: 50px;
@@ -612,10 +668,24 @@ strong {
       display: block;
     }
     .column-content{
-      border-bottom: 1px solid black;
+     /* border-bottom: 1px solid black;*/
       font-size: 16px;
       line-height: 40px;
 
+    }
+    div{
+      .row{
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  .pricelist_wrapper{
+    @media screen and (max-width: 800px){
+      overflow-x:scroll;
+      #accordion{
+        min-width: 700px;
+      }
     }
   }
 }
@@ -635,11 +705,14 @@ strong {
   .contact-ways{
     padding: 5% 0 5% 5%;
     font-size: 16px;
-    h4{
-      i{
-        color: @strong-red-code;
-        min-width: 36px;
-        margin-right: 5px;
+    a{
+      color: black;
+      h4{
+        i{
+          color: @strong-red-code;
+          min-width: 36px;
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -808,3 +881,18 @@ strong {
   }
 }
 //endregion
+
+.footer{
+  background: @wiki;
+  margin-top: 75px;
+}
+
+.nav-padding{
+  .event-btn;
+  a{
+    color: white !important;
+  }
+  &.alignleft{
+    float: left;
+  }
+}

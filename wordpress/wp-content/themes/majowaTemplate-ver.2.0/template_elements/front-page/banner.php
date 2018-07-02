@@ -13,6 +13,7 @@
     <div class="todayClasses">
         <?php
         $db = new DB('majowaeusymadmin','127.0.0.1','root','2200953');
+        //$db = new DB('majowaeusymadmin','majowaeusymadmin.mysql.db','majowaeusymadmin','At6394jksD');
         $classes = $db->getToDaysClasses();
         $i = 0;
         if(count($classes) > 0){
